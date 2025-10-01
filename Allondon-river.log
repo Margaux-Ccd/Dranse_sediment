@@ -1,0 +1,705 @@
+// --------------------------------------------------
+// BASEMENT log file:
+// Version:  v2.8.2// bmc file: D:/Data/La Dranse/QGIS/Model set-up/Morphodynamics/Allondon-river.bmc
+// started:  Mon Dec 23 19:03:51 2024
+// --------------------------------------------------
+/*
+*/
+PROJECT {
+	title  = La_Dranse_2024_10_17
+	author = anonymous_author
+}
+DOMAIN {
+	multiregion = unnamed_multiregion
+	PARALLEL {
+		number_threads = 8
+	}
+	BASEPLANE_2D {
+		region_name = La_Dranse_2024_10_17
+		GEOMETRY {
+			type = 2dm
+			file = La Dranse 2024-10-17_computational-mesh.2dm
+			STRINGDEF {
+				name               = inflow
+				node_ids           = (1494 793 685 898 687 683 1036 1413 554 599 552 1582)
+				upstream_direction = right
+			}
+			STRINGDEF {
+				name               = outflow
+				node_ids           = (1506 313 1985 1764 583 595 1550)
+				upstream_direction = right
+			}
+		}
+		TIMESTEP {
+			CFL                  = 0.9
+			total_run_time       = 86400
+			start_time           = 0
+			minimum_time_step    = 0.001
+			maximum_time_step    = 100.0
+			initial_time_step    = 1.0
+			ignore_wave_celerity = off
+			morph_cycle          = off
+		}
+		HYDRAULICS {
+			PARAMETER {
+				minimum_water_depth            = 0.05
+				riemann_solver                 = hllc
+				simulation_scheme              = exp
+				velocity_update_partial        = volume_area
+				dynamic_depth_solver           = on
+				dynamic_depth_solver_precision = 0.005
+				geo_min_area_ratio             = 0.05
+				geo_max_angle_quadrilateral    = 45
+				geo_min_aspect_ratio           = 0.06
+			}
+			FRICTION {
+				type                = manning
+				default_friction    = 0.03
+				input_type          = index_table
+				index               = (1 2)
+				friction            = (0.03 0.05)
+				wall_friction       = on
+				grain_size_friction = no
+			}
+			INITIAL {
+				type                  = continue
+				file                  = La_Dranse_2024_10_17_restart.cgns
+				restart_solution_time = -1
+			}
+			BOUNDARY {
+				name                 = inflow
+				string_name          = inflow
+				type                 = hydrograph
+				file                 = stationary.txt
+				slope                = 20.6
+				max_interval         = 20
+				number_of_iterations = 5000
+				weighting_type       = conveyance
+				dynamic_slope        = no
+				precision            = -1.0
+				wse_calc_method      = average
+			}
+			BOUNDARY {
+				name            = outflow
+				string_name     = outflow
+				type            = hqrelation
+				slope           = 2.0
+				weighting_type  = conveyance
+				wall_flux       = no
+				dynamic_slope   = no
+				wse_calc_method = average
+				conveyance_type = tables
+			}
+		}
+		MORPHOLOGY {
+			PARAMETER {
+				porosity                 = 37
+				density                  = 2650
+				control_volume_type      = constant
+				control_volume_initial   = soildef
+				create_new_layers        = off
+				min_theta_critic         = 0.02
+				local_slope_angle_repose = 30.0
+				strong_coupling          = off
+				distortion_offset        = 0
+				distortion_time_interval = -1
+			}
+			BEDMATERIAL {
+				GRAIN_CLASS {
+					diameters = (24)
+				}
+				MIXTURE {
+					name            = single
+					volume_fraction = (100)
+				}
+				SOIL_DEF {
+					name              = riverbed
+					tau_erosion_start = -1.0
+					LAYER {
+						mixture          = single
+						bottom_elevation = -5
+					}
+				}
+				SOIL_DEF {
+					name              = grass
+					tau_erosion_start = -1.0
+				}
+				SOIL_ASSIGNMENT {
+					index = (1 2)
+					soil  = (riverbed grass)
+					type  = index_table
+				}
+			}
+			INITIAL {
+				type = initial_mesh
+			}
+			BEDLOAD {
+				FORMULA {
+					bedload_formula                   = mpm
+					bedload_factor                    = 0.61625
+					bedload_exponent                  = 1.6
+					theta_critical                    = (0.047 0.047)
+					theta_critical_index              = (1 2)
+					theta_critical_approach           = theta_critical_vanrijn
+					local_slope_correction            = local_slope_vanrijn
+					critical_shear_stress_calibration = 1.0
+					bedforms_type                     = no_bedforms
+				}
+				BOUNDARY {
+					name              = inflow
+					type              = IOUp
+					string_name       = inflow
+					mixture           = single
+					fraction_boundary = 1.0
+				}
+				BOUNDARY {
+					name              = outflow
+					type              = IODown
+					string_name       = outflow
+					fraction_boundary = 1.0
+				}
+				DIRECTION {
+					lateral_transport_type     = lateral_bed_slope
+					lateral_index              = (1 2)
+					lateral_transport_factor   = 1.2
+					lateral_transport_exponent = 0.5
+					scale_lateral_transport    = yes
+				}
+				DIRECTION {
+					lateral_transport_type          = curvature_effect_dynamic
+					radius_calculation_type         = water_surface_elevation
+					lateral_index                   = (1 2)
+					min_abs_radius                  = 80
+					curvature_transport_factor_type = fix
+					curvature_transport_factor      = 7.0
+					update_timestep_radius          = 1000
+					initial_radius                  = 10000.0
+					min_abs_radius_use              = significance_value
+				}
+				PARAMETER {
+					bedload_routing_start          = 0.0
+					limit_bedload_wetted           = on
+					use_real_edge_lengths          = off
+					use_cell_averaged_bedload_flux = off
+				}
+			}
+		}
+		OUTPUT {
+			console_time_step = 1000
+			restart_time_step = 18000
+			SPECIAL_OUTPUT {
+				type             = node_centered
+				format           = sms
+				values           = (depth velocity tau deltaz z_node bedload_vec)
+				output_time_step = 1800
+				threshold_wse    = -1000000
+			}
+			SPECIAL_OUTPUT {
+				type                = boundary_history
+				boundary_values     = (Q Qsed)
+				output_time_step    = 900
+				flush_all_num_steps = 0
+				history_one_file    = no
+				threshold_wse       = -1000000
+			}
+			SPECIAL_OUTPUT {
+				type             = balance
+				balance_values   = (timestep water_volume sediment)
+				output_time_step = 1800
+				threshold_wse    = -1000000
+			}
+		}
+	}
+	PHYSICAL_PROPERTIES {
+		gravity   = 9.81
+		viscosity = 1e-06
+		rho_fluid = 1000
+	}
+}
+
+/*
+-> Domain: Input file has been successfully parsed and passed preliminary 
+   validation
+-> *** Start Simulation ***
+-> OpenMP: Computation is executed in parallel using 8 threads
+-> Domain Initialized
+-> initialize domain done
+-> initialize networkcommunication done
+-> Definition of sediment parameters
+-> BASEplane: Initialization of SubDomain 'La_Dranse_2024_10_17
+-> Reserving the vectors for nodes, elements & edges
+-> InputSMS: Number of Nodes = 2299
+-> InputSMS: Number of Elements = 4367
+-> Checking disjoint nodes ...
+-> Checking the area of elements ...
+-> Checking the aspect ratio of elements ...
+-> Checking for concave quadrilateral elements ...
+-> Checking for ambiguous quadrilateral elements ...
+-> InputSMS: Number of Edges = 6665
+-> InputSMS: Total mesh area = 28396.7 m2
+-> Creating internal Grid for Sediment Transport...
+-> Create Nodes of sediment grid...
+-> Create Edges of sediment grid...
+-> Create Elements of sediment grid...
+-> Finished creating grid for Sediment Transport in 0.026 [s].
+-> SedInput: Definition of soil mixtures
+-> SedInput: Initialization of sediment sources (slk, sk, sfk)
+-> SedInput: Initialization of soils and layers for sediment transport!
+-> SedInput: Creating soils and interpolating data on cell-vertex mesh !
+-> SedInput: Initialization of soil descriptions
+-> SedInput: Initialization of cell-centered soils
+-> SedInput: Interpolation of soils and mixtures on the sediment grid
+-> SedInput: Initialization of bedload control volumes
+-> SedInput: Initialization of fixed bed elevations
+-> SedInput: Initialization of sublayer
+-> SedInput: Preparing Theta critic
+-> Bedload: Create the sediment mass balance object
+-> Bedload: Initialize the conserved and temporary variables
+-> Bedload: Initialization of bed load transport and parameters
+-> Bedload: Definition of boundary conditions for bedload transport
+-> Bedload: Checking for inner boundary conditions for bedload transport
+-> Bedload: Initialization of bed forms
+-> Bedload: Initialization of upwind factors
+-> Bedload: Initialization of transport formula
+-> OpenMP: Computation is executed in parallel using 8 threads
+-> BASEplane: Determine first time step delta_t = 0.082226
+-> Domain: Starting time loop
+TIME =  0.000000e+00	hyd. Time Step =   8.222596e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = -0.000000e+00 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.000000e+03	hyd. Time Step =   7.199738e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 1.006867e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.000000e+03	hyd. Time Step =   4.361312e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 1.001779e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.000000e+03	hyd. Time Step =   1.000000e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 9.999438e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.000000e+03	hyd. Time Step =   5.538717e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 1.004944e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.000000e+03	hyd. Time Step =   6.548824e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 9.988769e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.000000e+03	hyd. Time Step =   1.749542e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 1.005020e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.000000e+03	hyd. Time Step =   3.644755e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 9.990976e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.000000e+03	hyd. Time Step =   6.110905e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 1.000011e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  9.000000e+03	hyd. Time Step =   6.807462e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 5.227794e-07 [m3/s] (inflow)
+ Qout[2]     = 1.004882e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.000000e+04	hyd. Time Step =   4.170730e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.936686e-07 [m3/s] (inflow)
+ Qout[2]     = 1.004674e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.100000e+04	hyd. Time Step =   4.573221e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 7.425663e-07 [m3/s] (inflow)
+ Qout[2]     = 1.004006e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.200000e+04	hyd. Time Step =   6.034133e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.368347e-07 [m3/s] (inflow)
+ Qout[2]     = 9.992302e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.300000e+04	hyd. Time Step =   6.686477e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 9.906244e-07 [m3/s] (inflow)
+ Qout[2]     = 1.003843e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.400000e+04	hyd. Time Step =   2.821402e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.963583e-05 [m3/s] (inflow)
+ Qout[2]     = 9.990383e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.500000e+04	hyd. Time Step =   7.857847e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.194767e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003784e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.600000e+04	hyd. Time Step =   7.910209e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.251499e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003484e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.700000e+04	hyd. Time Step =   6.079806e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.658099e-05 [m3/s] (inflow)
+ Qout[2]     = 9.976972e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.800000e+04	hyd. Time Step =   3.992125e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.714083e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003654e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.900000e+04	hyd. Time Step =   1.338693e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.626728e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003716e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.000000e+04	hyd. Time Step =   3.479298e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.810671e-06 [m3/s] (inflow)
+ Qout[2]     = 9.990582e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.100000e+04	hyd. Time Step =   4.039058e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.894439e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003825e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.200000e+04	hyd. Time Step =   5.120588e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.438004e-06 [m3/s] (inflow)
+ Qout[2]     = 9.989711e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.300000e+04	hyd. Time Step =   4.676012e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.633274e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003359e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.400000e+04	hyd. Time Step =   6.160506e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.175053e-06 [m3/s] (inflow)
+ Qout[2]     = 9.977869e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.500000e+04	hyd. Time Step =   3.101479e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.503492e-05 [m3/s] (inflow)
+ Qout[2]     = 9.988886e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.600000e+04	hyd. Time Step =   8.217382e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.746795e-06 [m3/s] (inflow)
+ Qout[2]     = 9.988502e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.700000e+04	hyd. Time Step =   3.493164e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.412303e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003615e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.800000e+04	hyd. Time Step =   9.271240e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.702161e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003510e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  2.900000e+04	hyd. Time Step =   9.905911e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.712710e-05 [m3/s] (inflow)
+ Qout[2]     = 9.986727e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.000000e+04	hyd. Time Step =   3.957071e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.640208e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003684e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.100000e+04	hyd. Time Step =   5.888744e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.160067e-06 [m3/s] (inflow)
+ Qout[2]     = 9.990039e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.200000e+04	hyd. Time Step =   6.543776e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.855697e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003707e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.300000e+04	hyd. Time Step =   5.878974e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.150717e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003755e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.400000e+04	hyd. Time Step =   2.152984e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.353337e-06 [m3/s] (inflow)
+ Qout[2]     = 9.989974e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.500000e+04	hyd. Time Step =   3.767492e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.494384e-06 [m3/s] (inflow)
+ Qout[2]     = 9.977358e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.600000e+04	hyd. Time Step =   3.110165e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 5.298045e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003439e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.700000e+04	hyd. Time Step =   1.457549e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.123955e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003712e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.800000e+04	hyd. Time Step =   2.607298e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 6.159056e-06 [m3/s] (inflow)
+ Qout[2]     = 9.989508e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  3.900000e+04	hyd. Time Step =   3.463920e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.216830e-06 [m3/s] (inflow)
+ Qout[2]     = 9.976639e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.000000e+04	hyd. Time Step =   5.491963e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.762365e-06 [m3/s] (inflow)
+ Qout[2]     = 9.989370e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.100000e+04	hyd. Time Step =   6.163083e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.553349e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003621e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.200000e+04	hyd. Time Step =   6.709937e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.394970e-06 [m3/s] (inflow)
+ Qout[2]     = 9.976507e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.300000e+04	hyd. Time Step =   2.769498e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 5.951135e-06 [m3/s] (inflow)
+ Qout[2]     = 9.990165e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.400000e+04	hyd. Time Step =   2.462013e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.170869e-06 [m3/s] (inflow)
+ Qout[2]     = 9.977097e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.500000e+04	hyd. Time Step =   3.417337e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 5.988465e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003785e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.600000e+04	hyd. Time Step =   1.136493e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.805915e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003600e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.700000e+04	hyd. Time Step =   2.630693e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.037334e-06 [m3/s] (inflow)
+ Qout[2]     = 9.989693e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.800000e+04	hyd. Time Step =   4.012989e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.692291e-05 [m3/s] (inflow)
+ Qout[2]     = 9.977161e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  4.900000e+04	hyd. Time Step =   6.645452e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.891833e-06 [m3/s] (inflow)
+ Qout[2]     = 9.990527e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.000000e+04	hyd. Time Step =   6.091581e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.566691e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003646e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.100000e+04	hyd. Time Step =   6.954002e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 6.887122e-06 [m3/s] (inflow)
+ Qout[2]     = 9.976197e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.200000e+04	hyd. Time Step =   4.045767e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 6.631508e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003554e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.300000e+04	hyd. Time Step =   1.508026e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.766874e-05 [m3/s] (inflow)
+ Qout[2]     = 9.989340e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.400000e+04	hyd. Time Step =   2.507410e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 9.768103e-06 [m3/s] (inflow)
+ Qout[2]     = 9.990673e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.500000e+04	hyd. Time Step =   1.256045e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.122425e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003673e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.600000e+04	hyd. Time Step =   2.558063e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.020240e-05 [m3/s] (inflow)
+ Qout[2]     = 9.989695e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.700000e+04	hyd. Time Step =   3.146090e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.320966e-06 [m3/s] (inflow)
+ Qout[2]     = 9.976395e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.800000e+04	hyd. Time Step =   7.442412e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.640648e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003638e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  5.900000e+04	hyd. Time Step =   2.987638e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 9.009952e-06 [m3/s] (inflow)
+ Qout[2]     = 9.987570e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.000000e+04	hyd. Time Step =   2.402406e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.152276e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003535e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.100000e+04	hyd. Time Step =   7.323084e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.634262e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003480e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.200000e+04	hyd. Time Step =   6.498287e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.352140e-06 [m3/s] (inflow)
+ Qout[2]     = 9.988626e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.300000e+04	hyd. Time Step =   6.374177e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 5.272141e-06 [m3/s] (inflow)
+ Qout[2]     = 1.003623e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.400000e+04	hyd. Time Step =   9.077230e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 4.236141e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003523e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.500000e+04	hyd. Time Step =   2.196965e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.212721e-05 [m3/s] (inflow)
+ Qout[2]     = 9.989146e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.600000e+04	hyd. Time Step =   3.196835e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.994128e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003609e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.700000e+04	hyd. Time Step =   3.058347e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.845276e-05 [m3/s] (inflow)
+ Qout[2]     = 9.975337e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.800000e+04	hyd. Time Step =   6.184678e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.712224e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003689e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  6.900000e+04	hyd. Time Step =   6.401920e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.022695e-05 [m3/s] (inflow)
+ Qout[2]     = 9.976504e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.000000e+04	hyd. Time Step =   4.355069e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.608852e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003624e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.100000e+04	hyd. Time Step =   9.886850e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.933327e-04 [m3/s] (inflow)
+ Qout[2]     = 9.988802e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.200000e+04	hyd. Time Step =   9.915939e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.283542e-04 [m3/s] (inflow)
+ Qout[2]     = 9.989319e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.300000e+04	hyd. Time Step =   1.285174e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.032391e-04 [m3/s] (inflow)
+ Qout[2]     = 1.003643e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.400000e+04	hyd. Time Step =   2.339591e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.300443e-04 [m3/s] (inflow)
+ Qout[2]     = 9.989510e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.500000e+04	hyd. Time Step =   4.863918e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 6.716197e-05 [m3/s] (inflow)
+ Qout[2]     = 9.988507e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.600000e+04	hyd. Time Step =   4.649743e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.037769e-04 [m3/s] (inflow)
+ Qout[2]     = 9.976503e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.700000e+04	hyd. Time Step =   3.746421e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 1.434951e-04 [m3/s] (inflow)
+ Qout[2]     = 9.975715e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.800000e+04	hyd. Time Step =   6.055621e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 9.815990e-05 [m3/s] (inflow)
+ Qout[2]     = 9.975646e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  7.900000e+04	hyd. Time Step =   7.361887e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 8.849846e-05 [m3/s] (inflow)
+ Qout[2]     = 1.003542e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.000000e+04	hyd. Time Step =   3.146828e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.244615e-04 [m3/s] (inflow)
+ Qout[2]     = 9.983002e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.100000e+04	hyd. Time Step =   2.009292e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.786932e-03 [m3/s] (inflow)
+ Qout[2]     = 9.990722e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.200000e+04	hyd. Time Step =   1.296673e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 6.290133e-04 [m3/s] (inflow)
+ Qout[2]     = 1.003681e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.300000e+04	hyd. Time Step =   2.721749e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.183465e-04 [m3/s] (inflow)
+ Qout[2]     = 9.989623e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.400000e+04	hyd. Time Step =   3.443247e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 2.669797e-04 [m3/s] (inflow)
+ Qout[2]     = 9.976253e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.500000e+04	hyd. Time Step =   2.645948e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 3.677015e-04 [m3/s] (inflow)
+ Qout[2]     = 1.003392e+01 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+TIME =  8.600000e+04	hyd. Time Step =   1.418244e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.000000e+01 [m3/s] (inflow)
+ Qsed_in[1]  = 7.280553e-04 [m3/s] (inflow)
+ Qout[2]     = 9.992557e+00 [m3/s] (outflow)
+ Qsed_out[2] = 0.000000e+00 [m3/s] (outflow)
+-> Domain: Run Time of the simulation= 3106.63 sec
+-> Domain: Finished simulation.
+
+*/

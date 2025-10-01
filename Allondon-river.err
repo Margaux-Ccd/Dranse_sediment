@@ -1,0 +1,12 @@
+// --------------------------------------------------
+// BASEMENT log file:
+// Version:  v2.8.2// bmc file: D:/Data/La Dranse/QGIS/Model set-up/Morphodynamics/Allondon-river.bmc
+// started:  Mon Dec 23 19:03:51 2024
+// --------------------------------------------------
+/*
+
+WARNING -> Some elements in the mesh have very small area!
+   These elements may cause instabilities in the program!
+   See the file geofile_Grid.err for the element numbers.
+
+*/
