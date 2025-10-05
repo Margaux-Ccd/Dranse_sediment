@@ -1,0 +1,11 @@
+#TIME[s]	VALUE
+0	10
+129600	189
+259200	10
+
+# Notes:
+# Discharge hydrograph for Dranse River (confluence with Rhône)
+# 100-year flood, triangular shape over 3 days
+# Baseline discharge: 10 m³/s
+# Peak discharge (HQ100): 189 m³/s at 1.5 days (129600 s)
+# Return to baseline at 3 days (259200 s)
