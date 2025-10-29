@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BASEMENT Input Reference</title>
+     <style type="text/css">
+       BODY { font-family: Arial,Verdana,Sans-Serif; width: 800px; font-size: 9pt; }
+       A:link, A:visited { color: blue; }        TD { padding: 2px; font-size: 9pt; border-left: 1px solid black; border-top: 1px solid black; }
+       TR { }
+       TABLE { width: 100%; border-spacing: 0px; border-collapse: collapse; border-bottom: 1px solid black;  border-right: 1px solid black; margin-bottom: 5px; }
+       H4 { font-size: 10pt; font-style:italic; text-decoration: underline; }
+       .title0 { margin-top: 5px; margin-bottom: 15px; font-size: 12pt; font-weight: bold; display: none; }
+       .title1 { margin-top: 5px; margin-bottom: 15px; font-size: 10pt; font-weight: bold; display: none; }
+       .title2 { margin-top: 5px; margin-bottom: 10px; font-size: 10pt; display: none;}
+       .title3 { margin-top: 5px; margin-bottom: 10px; font-size: 10pt; display: none;}
+       .title4 { margin-top: 5px; margin-bottom: 5px; font-size: 10pt; display: none;}
+       .title5 { margin-top: 5px; margin-bottom: 5px; font-size: 10pt; display: none;}
+       .title6 { margin-top: 5px; margin-bottom: 5px; font-size: 10pt; display: none;}
+       .blockList { border-right: 1px solid black; border-bottom: 1px solid black; padding 0px; }
+       .blockListLevel0 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px; margin-left: 0px; background-color: #99ccff; }
+       .blockListLevel1 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px; margin-left: 80px; background-color: #ccffff; }
+       .blockListLevel2 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px;margin-left: 80px; background-color: #ccffcc; }
+       .blockListLevel3 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px; margin-left: 80px; background-color: #ffff99; }
+       .blockListLevel4 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px; margin-left: 80px; background-color: #ffcc99; }
+       .blockListLevel5 { border-top: 1px solid black; border-left: 1px solid black; padding-left: 3px; padding-top: 3px; padding-right: 0px; padding-bottom: 0px; margin-left: 80px; background-color: #ff99cc; }
+       .tagDescription { margin-bottom: 5px; }
+       .blockUsage { margin-bottom: 10px; }       HR { page-break-after: always; height: 1px; margin-top: 20px; margin-bottom: 20px; border: 0px; background-color: black; }
+    </style>
+ </head>
+  <body>  <h1>BASEMENT Reference Manual: Description of 1D Geometry File Structure and Parameters</h1>
+ <hr/>  Please read the INTRODUCTION first
+ <br>
+ <hr/>  <h4>Input block structure</h4>
+    <div class="blockList">
+
+<!-- 1 < 1-->
+    <div class="blockListLevel0">
+      <a href="#block_1">CROSS_SECTION</a><br/>
+
+<!-- 2 < 2-->
+    <div class="blockListLevel1">
+      <a href="#block_1.1">SOIL_DEF</a><br/>
+    </div>
+    </div>
+    </div>
+<hr/>
+ <b>INTRODUCTION</b> <br>  In this doc_BASECHAIN_GEOMETRY.html file the structure of the geometry file for BASEchain is described.  The topography of a 1D simulation is defined by the repeated definition of cross sections.  The topography file itself is the root block called BASEMENT_GEOMETRY. Thus the block BASEMENT_GEOMETRY must not be specified in the topography file.  <hr/>  <h4>List of Blocks</h4> <br>  <!-- starting block  -->
+  <a name="block_"></a>
+  <!-- PAGEBREAKHERE --><div class="title0">BASECHAIN_GEOMETRY</div>
+  <table>
+    <tr>
+      <td colspan="2"  style="width: 50%"><b>BASECHAIN_GEOMETRY</b></td>
+      <td>compulsory</td>
+      <td><span style="text-decoration: line-through;">repeatable</span></td>
+    </tr>
+    <tr>
+      <td style="width: 20%">Description:</td>
+      <td colspan="3"></td>
+    </tr>
+    <tr>
+       <td>Inner Blocks:</td>
+       <td colspan="3"><a href="#block_.1">CROSS_SECTION</a></td>
+    </tr>
+  </table>
+  <br/>
+<hr/>  <!-- starting block 1 -->
+  <a name="block_1"></a>
+  <!-- PAGEBREAKHERE --><div class="title1">CROSS_SECTION</div>
+  <table>
+    <tr>
+      <td colspan="2"  style="width: 50%"><b>CROSS_SECTION</b></td>
+      <td>compulsory</td>
+      <td>repeatable</td>
+    </tr>
+    <tr>
+      <td>Super Blocks:</td>
+      <td colspan="3"><a href="#block_1">BASECHAIN_GEOMETRY</a></td>
+    </tr>
+    <tr>
+      <td style="width: 20%">Description:</td>
+      <td colspan="3">Every element in the computational grid receives a cross section, which defines the topographical information used to describe the hydraulic and sediment properties within the element. The cross sections are separated by the difference of their 'distance_coord' which is the coordinate along the river.<br/>Each cross section is defined within its own cross section block. The definition of the cross section requires at least the cross section nodes, the name of the cross section as a unique identifier and the distance coordinate.<br/>Node coordinates are defined locally, given by two coordinates: first, the distance to the most left point of the cross section with respect to the flow direction and second, the elevation. Other properties such as specific friction values for specific parts of the cross section, the range of the main channel and other properties can also be defined. These properties are defined by giving the ranges over which they span over the cross section. These ranges can either be defined by giving the actual node coordinates along the cross section (which have to correspond exactly to a given node coordinate) or by referencing the slice directly using slice indexes. A slice refers to the segment between two adjacent nodes.<br/>Concerning Friction: For 1D, only Strickler Values are a valid input. In case you are used to Manning Values, please make the conversion k_str = 1/n_manning on your own. Note that you can define the friction coefficient on several stages. Your first option is to define a default_friction in the BMC file within the FRICTION block. Your second option is to define a default friction in the cross section itself which overwrites the coefficient from the BMC file. Further, it is possible to assign different frictions to different ranges. </td>
+    </tr>
+    <tr>
+       <td>Inner Blocks:</td>
+       <td colspan="3"><a href="#block_1.1">SOIL_DEF</a></td>
+    </tr>
+  </table>
+  <br/>
+  <table>
+    <tr>
+      <td  style="width: 20%"><i>Variable</i></td>
+      <td><i>type</i></td>
+      <td><i>comp.</i></td>
+      <td><i>condition</i></td>
+      <td><i>units</i></td>
+      <td><i>default</i></td>
+      <td><i>values</i></td>
+    </tr>    <tr>
+      <td><b>name</b></td>
+      <td>string</td>
+      <td>yes</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>distance_coord</b></td>
+      <td>real</td>
+      <td>yes</td>
+      <td>-</td>
+      <td>[km]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>sternberg</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0.0</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>reference_height</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>[m]</td>
+      <td>0.0</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>left_point_global_coords</b></td>
+      <td>comma separated list of 3 reals</td>
+      <td>no</td>
+      <td>-</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>orientation_angle</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>[deg]</td>
+      <td>0.0</td>
+      <td>0 &lt;= x &lt;= 360</td>
+    </tr>
+    <tr>
+      <td><b>node_coords</b></td>
+      <td>comma separated list of sublists of 2 reals</td>
+      <td>yes</td>
+      <td>-</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>interpolation_fixpoints</b></td>
+      <td>comma separated list of integers</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Node index (starting from 1).</td>
+    </tr>
+    <tr>
+      <td><b>water_flow_range</b></td>
+      <td>comma separated list of 2 reals</td>
+      <td>no</td>
+      <td>exclusive: 'water_flow_slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>exact coordinates of a defined node</td>
+    </tr>
+    <tr>
+      <td><b>water_flow_slice_indexes</b></td>
+      <td>comma separated list of 2 integers</td>
+      <td>no</td>
+      <td>exclusive: 'water_flow_range'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Two slice indexes (starting from 1). The indexes supplied are included in the range. </td>
+    </tr>
+    <tr>
+      <td><b>main_channel_range</b></td>
+      <td>comma separated list of 2 reals</td>
+      <td>no</td>
+      <td>exclusive: 'main_channel_slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>exact length coordinates of a defined node</td>
+    </tr>
+    <tr>
+      <td><b>bottom_range</b></td>
+      <td>comma separated list of 2 reals</td>
+      <td>no</td>
+      <td>exclusive: 'bottom_slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>exact length coordinates of a defined node</td>
+    </tr>
+    <tr>
+      <td><b>main_channel_slice_indexes</b></td>
+      <td>comma separated list of 2 integers</td>
+      <td>no</td>
+      <td>exclusive: 'main_channel_range'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Two slice indexes (starting from 1). The indexes supplied are included in the range. </td>
+    </tr>
+    <tr>
+      <td><b>bottom_slice_indexes</b></td>
+      <td>comma separated list of 2 integers</td>
+      <td>no</td>
+      <td>exclusive: 'bottom_range'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Two slice indexes (starting from 1). The indexes supplied are included in the range. </td>
+    </tr>
+    <tr>
+      <td><b>active_range</b></td>
+      <td>comma separated list of 2 reals</td>
+      <td>no</td>
+      <td>exclusive: 'active_slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>exact length coordinates of a defined node</td>
+    </tr>
+    <tr>
+      <td><b>active_slice_indexes</b></td>
+      <td>comma separated list of 2 integers</td>
+      <td>no</td>
+      <td>exclusive: 'active_range'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Two slice indexes (starting from 1). The indexes supplied are included in the range.</td>
+    </tr>
+    <tr>
+      <td><b>bed_form_factor</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.0</td>
+      <td>0 &lt; x &lt;= 1</td>
+    </tr>
+    <tr>
+      <td><b>theta_critic</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-1.0</td>
+      <td>-1 &lt;= x &lt;= 1</td>
+    </tr>
+    <tr>
+      <td><b>friction_calibration_factor</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.0</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>default_friction</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>x &gt;= 0</td>
+    </tr>
+    <tr>
+      <td><b>friction_coefficients</b></td>
+      <td>comma separated list of reals</td>
+      <td>no</td>
+      <td>-</td>
+      <td>m^(1/3)/s</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>friction_ranges</b></td>
+      <td>comma separated list of sublists of 2 reals</td>
+      <td>no</td>
+      <td>exclusive: 'friction_slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>exact length coordinates of a defined node</td>
+    </tr>
+    <tr>
+      <td><b>friction_slice_indexes</b></td>
+      <td>comma separated list of sublists of 2 integers</td>
+      <td>no</td>
+      <td>exclusive: 'friction_ranges'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Two slice indexes (starting from 1). The indexes supplied are included in the range. </td>
+    </tr>
+    <tr>
+      <td><b>table_fixed_points</b></td>
+      <td>comma separated list of reals</td>
+      <td>no</td>
+      <td>-</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>table_fixed_lower_limit</b></td>
+      <td>real</td>
+      <td>no</td>
+      <td>-</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>interpolated</b></td>
+      <td>boolean</td>
+      <td>no</td>
+      <td>-</td>
+      <td>-</td>
+      <td>no</td>
+      <td>{no, yes}</td>
+    </tr>
+  </table>
+<h4>Description of Variables</h4>
+<div class="tagDescription">
+<b>name</b> - The unique name of the cross section. 
+</div>
+<div class="tagDescription">
+<b>distance_coord</b> - Distance coordinate of cross section, measured from up to downstream. Note that the units of the coordinate is in [km]!
+</div>
+<div class="tagDescription">
+<b>sternberg</b> - Sternberg-factor for the reduction of volume by abrasion V = V0e**(s*Dx)
+</div>
+<div class="tagDescription">
+<b>reference_height</b> - The value of the reference height is added during input to the node elevation.
+</div>
+<div class="tagDescription">
+<b>left_point_global_coords</b> - Global coordinates of the left cross section point, which is used as the geographical reference point. If this value is provided together with the 'orientation_angle' for all cross sections, the modeled river is displayed in the region view of the graphical user interface. Further, this information is used by the cross section interpolator to estimate curvatures etc.
+</div>
+<div class="tagDescription">
+<b>orientation_angle</b> - In-plane angle of the cross section line with left point as origin. The angle is measured in a mathematical way, counter-clockwise: The angle 0 is given by the (1,0) vector.
+</div>
+<div class="tagDescription">
+<b>node_coords</b> - Coordinates of the points defining the cross section. The first coordinate is the distance to the left point, the second the absolute elevation. 
+</div>
+<div class="tagDescription">
+<b>interpolation_fixpoints</b> - The interpolation fixpoints are used to create new cross sections in between existing ones. Fix points are in interpolations connected to each other. This allows to cleanly transfer slopes etc. into the interpolated cross section. The first and last nodes of the cross sections are for obvious reasons always included. Counting starts at 1.
+</div>
+<div class="tagDescription">
+<b>water_flow_range</b> - Defines which part of the cross section is considered to be flowing. Only this part will be used for solving of the momentum equation, rest of the cross section  is considered to be only storage area in the continuity equation. The default is that the whole cross section area is flowing. Try to not define storage areas in the main channel, as in this case a stable behaviour is not assured, i.e. when only the non flowing part of the channel is wetted! Also the non  flowing areas are not taken in accont for sediment deposition and erosion!
+</div>
+<div class="tagDescription">
+<b>water_flow_slice_indexes</b> - Same as tag 'water_flow_range', except the fact that not coordinates are supplied but slice indices. 
+</div>
+<div class="tagDescription">
+<b>main_channel_range</b> - Range defining the span of the main channel. Everything left and right of the channel is treated as floodplain. If not defined, the whole cross section is assumed to belong to the main channel. 
+</div>
+<div class="tagDescription">
+<b>bottom_range</b> - Range defining the span of the bottom/bedload activ zone.
+</div>
+<div class="tagDescription">
+<b>main_channel_slice_indexes</b> - Same as 'main_channel_range', except the fact that not coordinates are supplied but slice indices. 
+</div>
+<div class="tagDescription">
+<b>bottom_slice_indexes</b> - Same as 'bottom_range', except the fact that not coordinates are supplied but slice indices. 
+</div>
+<div class="tagDescription">
+<b>active_range</b> - This range defines the active part of the cross section and must span from the left to the right dike. If not defined, the whole cross section is assumed to be active and the elevation of the first and last point will be assumed to correspond to the dike elevation. 
+</div>
+<div class="tagDescription">
+<b>active_slice_indexes</b> - Same as 'active_slice_indexes', except the fact that not coordinates are supplied but slice indices. 
+</div>
+<div class="tagDescription">
+<b>bed_form_factor</b> - Factor considering the influence of bed forms on bottom shear stress (ripple factor). This factor reduces the bottom shear stress due to bedforms with a constant value. If this factor is set to 1.0 (default), there is no influence and the standard shear stress is used. 
+</div>
+<div class="tagDescription">
+<b>theta_critic</b> - User defined dimensionless critical bottom shear stress (Shields paramter) for this cross section. If specified by the user (values between 0.0 and 1.0), this local theta critic is used for this cross section.However, for negative values of this local theta critical, the standard theta critical is used defined in the BEDLOAD-PARAMETER block (default behaviour)
+</div>
+<div class="tagDescription">
+<b>friction_calibration_factor</b> - Calibration factor between 0.0 and 10.0 to modify the friction value locally for this cross section.
+</div>
+<div class="tagDescription">
+<b>default_friction</b> - Default Strickler friction value which will be used for the cross section where no individual friction coefficient is defined. 
+</div>
+<div class="tagDescription">
+<b>friction_coefficients</b> - Strickler Friction values which should be assigned to the 'friction_ranges' (or 'friction_slice_indices').
+</div>
+<div class="tagDescription">
+<b>friction_ranges</b> - Ranges to which the 'friction_coefficients' are applied.
+</div>
+<div class="tagDescription">
+<b>friction_slice_indexes</b> - Same as 'friction_ranges', except the fact that not coordinates but slice indices are supplied.
+</div>
+<div class="tagDescription">
+<b>table_fixed_points</b> - Some fixed points which should be included in the table calculation. Note that these values are only used if you use lookup tables for hydraulic properties (see SECTION_COMPUTATION within the command file).
+</div>
+<div class="tagDescription">
+<b>table_fixed_lower_limit</b> - This variable allows to fix the lowest water surface elevation used in the 'lookup-table' for A(z) to a different value than the lowest elevation in the cross section. This option is useful if you include a deep lake in your model containing a large water volume not participating in the dynamics of your river system.
+</div>
+<div class="tagDescription">
+<b>interpolated</b> - This is an internal tag used to indicate that the cross section is the result of an interpolation of two primary cross sections.
+</div>
+<hr/>  <!-- starting block 1.1 -->
+  <a name="block_1.1"></a>
+  <!-- PAGEBREAKHERE --><div class="title2">SOIL_DEF</div>
+  <table>
+    <tr>
+      <td colspan="2"  style="width: 50%"><b>SOIL_DEF</b></td>
+      <td><span style="text-decoration: line-through;">compulsory</span></td>
+      <td>repeatable</td>
+    </tr>
+    <tr>
+      <td>Super Blocks:</td>
+      <td colspan="3"><a href="#block_">BASECHAIN_GEOMETRY</a> &gt; <a href="#block_1">CROSS_SECTION</a></td>
+    </tr>
+    <tr>
+      <td style="width: 20%">Description:</td>
+      <td colspan="3">This block is used to assign a soil to a part of the cross section. Soil assignments must not overlap and must reference a valid soil definition, defined in the input bmc file. </td>
+    </tr>
+  </table>
+  <br/>
+  <table>
+    <tr>
+      <td  style="width: 20%"><i>Variable</i></td>
+      <td><i>type</i></td>
+      <td><i>comp.</i></td>
+      <td><i>condition</i></td>
+      <td><i>units</i></td>
+      <td><i>default</i></td>
+      <td><i>values</i></td>
+    </tr>    <tr>
+      <td><b>index</b></td>
+      <td>integer</td>
+      <td>yes</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>x &gt;= 0</td>
+    </tr>
+    <tr>
+      <td><b>range</b></td>
+      <td>comma separated list of 2 reals</td>
+      <td>yes</td>
+      <td>exclusive: 'slice_indexes'</td>
+      <td>[m]</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><b>slice_indexes</b></td>
+      <td>comma separated list of 2 integers</td>
+      <td>yes</td>
+      <td>exclusive: 'range'</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </table>
+<h4>Description of Variables</h4>
+<div class="tagDescription">
+<b>index</b> - Index of the soil, as defined within the SOIL_ASSIGNMENT block in the bmc input file. 
+</div>
+<div class="tagDescription">
+<b>range</b> - Range in cross section to which the soil with the corresponding 'index' should be assigned. 
+</div>
+<div class="tagDescription">
+<b>slice_indexes</b> - Same as 'range', but refers to slice index rather than coordiantes. 
+</div>
+<hr/></body>
+</html>
