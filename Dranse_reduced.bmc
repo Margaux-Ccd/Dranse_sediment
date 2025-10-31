@@ -13,7 +13,7 @@ DOMAIN {
 		region_name = La_Dranse_2024_10_17
 		GEOMETRY {
 			type = 2dm
-			file = La Dranse 2024-10-17_computational-mesh.2dm
+			file = Dranse_elevation_mesh_4th_bathymetry.2dm
 			STRINGDEF {
 				name               = inflow
 				node_ids           = (1494 793 685 898 687 683 1036 1413 554 599 552 1582)
