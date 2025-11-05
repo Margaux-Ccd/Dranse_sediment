@@ -52,7 +52,7 @@ DOMAIN {
 				name        = inflow
 				string_name = inflow
 				type        = hydrograph
-				file        = Flood_3_15_10_2000_reduced_18000.txt
+				file        = Discharge_2024_12hmean_scanperiod.txt
 				slope       = 20.6
 			}
 			BOUNDARY {
@@ -137,17 +137,17 @@ DOMAIN {
 				type             = node_centered
 				format           = sms
 				values           = (depth velocity tau deltaz z_node bedload_vec)
-				output_time_step = 1800
+				output_time_step = 43200
 			}
 			SPECIAL_OUTPUT {
 				type             = boundary_history
 				boundary_values  = (Q Qsed)
-				output_time_step = 900
+				output_time_step = 43200
 			}
 			SPECIAL_OUTPUT {
 				type             = balance
 				balance_values   = (timestep water_volume sediment)
-				output_time_step = 1800
+				output_time_step = 43200
 			}
 		}
 	}
