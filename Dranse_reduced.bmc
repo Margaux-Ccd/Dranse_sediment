@@ -27,7 +27,7 @@ DOMAIN {
 		}
 		TIMESTEP {
 			CFL            = 0.9
-			total_run_time = 18000
+			total_run_time = 2289600
 			start_time     = 0
 		}
 		HYDRAULICS {
@@ -103,7 +103,7 @@ DOMAIN {
 				}
 				BOUNDARY {
 					name        = inflow
-					type        = IOUp
+					type        = transport_capacity
 					string_name = inflow
 					mixture     = Sample_1
 				}
