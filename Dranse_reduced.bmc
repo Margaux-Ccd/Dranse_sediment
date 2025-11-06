@@ -44,16 +44,14 @@ DOMAIN {
 				wall_friction    = on
 			}
 			INITIAL {
-				type                  = continue
-				file                  = La_Dranse_2024_10_17_restart.cgns
-				restart_solution_time = -1
+				type = dry
 			}
 			BOUNDARY {
 				name        = inflow
 				string_name = inflow
 				type        = hydrograph
-				file        = Discharge_2024_12hmean_scanperiod.txt
-				slope       = 20.6
+				file        = Discharge_scanperiod_5min.txt
+				slope       = 2.0
 			}
 			BOUNDARY {
 				name        = outflow
@@ -132,7 +130,7 @@ DOMAIN {
 		}
 		OUTPUT {
 			console_time_step = 1000
-			restart_time_step = 18000
+			restart_time_step = 43200
 			SPECIAL_OUTPUT {
 				type             = node_centered
 				format           = sms
