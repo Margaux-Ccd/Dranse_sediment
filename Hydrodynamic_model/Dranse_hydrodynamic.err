@@ -1,0 +1,12 @@
+// --------------------------------------------------
+// BASEMENT log file:
+// Version:  v2.8.2// bmc file: C:\Users\marga\Documents\EPFL\Cours\S3\Dranse\BASEMENT_model\Dranse_sediment\Hydrodynamic_model/Dranse_hydrodynamic.bmc
+// started:  Mon Nov 10 18:08:33 2025
+// --------------------------------------------------
+/*
+
+WARNING -> Some elements in the mesh have very small area!
+   These elements may cause instabilities in the program!
+   See the file geofile_Grid.err for the element numbers.
+
+*/

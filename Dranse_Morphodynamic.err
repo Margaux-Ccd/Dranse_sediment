@@ -1,0 +1,236 @@
+// --------------------------------------------------
+// BASEMENT log file:
+// Version:  v2.8.2// bmc file: C:\Users\marga\Documents\EPFL\Cours\S3\Dranse\BASEMENT_model\Dranse_sediment/Dranse_Morphodynamic.bmc
+// started:  Mon Nov 10 18:19:03 2025
+// --------------------------------------------------
+/*
+
+WARNING -> Some elements in the mesh have very small area!
+   These elements may cause instabilities in the program!
+   See the file geofile_Grid.err for the element numbers.
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.15161).
+   	missing volume to compensate the overdraft:   0.00419147
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.17193).
+   	missing volume to compensate the overdraft:   0.0180614
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.17818).
+   	missing volume to compensate the overdraft:   0.0246036
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.18363).
+   	missing volume to compensate the overdraft:   0.0208102
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.19811).
+   	missing volume to compensate the overdraft:   0.00359965
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.38166).
+   	missing volume to compensate the overdraft:   0.0066832
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.39296).
+   	missing volume to compensate the overdraft:   0.00503476
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.39729).
+   	missing volume to compensate the overdraft:   0.0205872
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.4015).
+   	missing volume to compensate the overdraft:   0.00177676
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.40581).
+   	missing volume to compensate the overdraft:   0.00859285
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.41014).
+   	missing volume to compensate the overdraft:   0.0117707
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.41554).
+   	missing volume to compensate the overdraft:   0.034517
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.42376).
+   	missing volume to compensate the overdraft:   0.0255489
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.42636).
+   	missing volume to compensate the overdraft:   0.0236721
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.42891).
+   	missing volume to compensate the overdraft:   0.0237225
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.43145).
+   	missing volume to compensate the overdraft:   0.0240677
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.434).
+   	missing volume to compensate the overdraft:   0.0239455
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.43912).
+   	missing volume to compensate the overdraft:   0.0101367
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.44328).
+   	missing volume to compensate the overdraft:   0.0120536
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.44748).
+   	missing volume to compensate the overdraft:   0.00876994
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.4518).
+   	missing volume to compensate the overdraft:   0.0160183
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.45609).
+   	missing volume to compensate the overdraft:   0.015847
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.46147).
+   	missing volume to compensate the overdraft:   0.0359289
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.46966).
+   	missing volume to compensate the overdraft:   0.034643
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3168 (slope = 2.86311).
+   	missing volume to compensate the overdraft:   0.00468817
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3177 (slope = 4.47775).
+   	missing volume to compensate the overdraft:   0.034812
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3168 (slope = 2.86709).
+   	missing volume to compensate the overdraft:   0.0074954
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.68445).
+   	missing volume to compensate the overdraft:   0.011351
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.68863).
+   	missing volume to compensate the overdraft:   0.0130511
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.69281).
+   	missing volume to compensate the overdraft:   0.0140902
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.75952).
+   	missing volume to compensate the overdraft:   0.000741759
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.76367).
+   	missing volume to compensate the overdraft:   0.00182074
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.76783).
+   	missing volume to compensate the overdraft:   0.00311463
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.77197).
+   	missing volume to compensate the overdraft:   0.00448416
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.77612).
+   	missing volume to compensate the overdraft:   0.00578782
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.78027).
+   	missing volume to compensate the overdraft:   0.00707521
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.78441).
+   	missing volume to compensate the overdraft:   0.00836993
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.78854).
+   	missing volume to compensate the overdraft:   0.00970371
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.79267).
+   	missing volume to compensate the overdraft:   0.010964
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.7968).
+   	missing volume to compensate the overdraft:   0.0121394
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.80092).
+   	missing volume to compensate the overdraft:   0.013373
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.80505).
+   	missing volume to compensate the overdraft:   0.0145557
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.80917).
+   	missing volume to compensate the overdraft:   0.0150869
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.81329).
+   	missing volume to compensate the overdraft:   0.0175353
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.81741).
+   	missing volume to compensate the overdraft:   0.0193056
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.82152).
+   	missing volume to compensate the overdraft:   0.0206161
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.82564).
+   	missing volume to compensate the overdraft:   0.0219264
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 2.99825).
+   	missing volume to compensate the overdraft:   0.00271217
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 3.00215).
+   	missing volume to compensate the overdraft:   0.010538
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 3.00604).
+   	missing volume to compensate the overdraft:   0.0119467
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 3.00994).
+   	missing volume to compensate the overdraft:   0.0125055
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 3.01383).
+   	missing volume to compensate the overdraft:   0.0137822
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #1544 (slope = 3.0255).
+   	missing volume to compensate the overdraft:   0.0521697
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3168 (slope = 3.84275).
+   	missing volume to compensate the overdraft:   0.0477889
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3168 (slope = 3.8504).
+   	missing volume to compensate the overdraft:   0.0488739
+
+WARNING -> Mass conservation is not guaranteed! Negative water depth in element 
+   #3168 (slope = 4.16798).
+   	missing volume to compensate the overdraft:   0.057137
+
+*/

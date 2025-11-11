@@ -1,0 +1,198 @@
+// --------------------------------------------------
+// BASEMENT log file:
+// Version:  v2.8.2// bmc file: C:\Users\marga\Documents\EPFL\Cours\S3\Dranse\BASEMENT_model\Dranse_sediment\Hydrodynamic_model/Dranse_hydrodynamic.bmc
+// started:  Mon Nov 10 18:08:33 2025
+// --------------------------------------------------
+/*
+*/
+PROJECT {
+	title  = Dranse_Hydrodynamic
+	author = anonymous_author
+}
+DOMAIN {
+	multiregion = unnamed_multiregion
+	BASEPLANE_2D {
+		region_name = La_Dranse_2024_10_17
+		GEOMETRY {
+			type = 2dm
+			file = Dranse_computational_mesh_10_11_25.2dm
+			STRINGDEF {
+				name               = inflow
+				node_ids           = (331 557 1854 1836 1855 1853 499 1960 1890 1935 1937 317)
+				upstream_direction = right
+			}
+			STRINGDEF {
+				name               = outflow
+				node_ids           = (241 786 2005 710 1919 1931 285)
+				upstream_direction = right
+			}
+		}
+		TIMESTEP {
+			CFL                  = 0.9
+			total_run_time       = 15000
+			minimum_time_step    = 0.001
+			maximum_time_step    = 100.0
+			initial_time_step    = 1.0
+			start_time           = -1.0
+			ignore_wave_celerity = off
+			morph_cycle          = off
+		}
+		HYDRAULICS {
+			PARAMETER {
+				minimum_water_depth            = 0.05
+				riemann_solver                 = hllc
+				simulation_scheme              = exp
+				velocity_update_partial        = volume_area
+				dynamic_depth_solver           = on
+				dynamic_depth_solver_precision = 0.005
+				geo_min_area_ratio             = 0.05
+				geo_max_angle_quadrilateral    = 45
+				geo_min_aspect_ratio           = 0.06
+			}
+			FRICTION {
+				type                = manning
+				default_friction    = 0.03
+				input_type          = index_table
+				index               = (1 2)
+				friction            = (0.03 0.05)
+				wall_friction       = on
+				grain_size_friction = no
+			}
+			INITIAL {
+				type = dry
+			}
+			BOUNDARY {
+				name                 = inflow
+				string_name          = inflow
+				type                 = hydrograph
+				file                 = Discharge_scanperiod_5min.txt
+				slope                = 20.6
+				max_interval         = 20
+				number_of_iterations = 5000
+				weighting_type       = conveyance
+				dynamic_slope        = no
+				precision            = -1.0
+				wse_calc_method      = average
+			}
+			BOUNDARY {
+				name            = outflow
+				string_name     = outflow
+				type            = hqrelation
+				slope           = 2.0
+				weighting_type  = conveyance
+				wall_flux       = no
+				dynamic_slope   = no
+				wse_calc_method = average
+				conveyance_type = tables
+			}
+		}
+		OUTPUT {
+			console_time_step = 1000
+			restart_time_step = 10000
+			SPECIAL_OUTPUT {
+				type             = node_centered
+				format           = sms
+				values           = (depth velocity tau wse)
+				output_time_step = 1800
+				threshold_wse    = -1000000
+			}
+			SPECIAL_OUTPUT {
+				type                = boundary_history
+				boundary_values     = (Q)
+				output_time_step    = 900
+				flush_all_num_steps = 0
+				history_one_file    = no
+				threshold_wse       = -1000000
+			}
+			SPECIAL_OUTPUT {
+				type             = balance
+				balance_values   = (timestep water_volume)
+				output_time_step = 1800
+				threshold_wse    = -1000000
+			}
+		}
+	}
+	PARALLEL {
+		number_threads = 8
+	}
+	PHYSICAL_PROPERTIES {
+		gravity   = 9.81
+		viscosity = 1e-06
+		rho_fluid = 1000
+	}
+}
+
+/*
+-> Domain: Input file has been successfully parsed and passed preliminary 
+   validation
+-> *** Start Simulation ***
+-> OpenMP: Computation is executed in parallel using 8 threads
+-> Domain Initialized
+-> initialize domain done
+-> initialize networkcommunication done
+-> BASEplane: Initialization of SubDomain 'La_Dranse_2024_10_17
+-> Reserving the vectors for nodes, elements & edges
+-> InputSMS: Number of Nodes = 2299
+-> InputSMS: Number of Elements = 4367
+-> Checking disjoint nodes ...
+-> Checking the area of elements ...
+-> Checking the aspect ratio of elements ...
+-> Checking for concave quadrilateral elements ...
+-> Checking for ambiguous quadrilateral elements ...
+-> InputSMS: Number of Edges = 6665
+-> InputSMS: Total mesh area = 28396.7 m2
+-> OpenMP: Computation is executed in parallel using 8 threads
+-> BASEplane: Determine first time step delta_t = 1
+-> Domain: Starting time loop
+TIME =  0.000000e+00	hyd. Time Step =   1.000000e+00 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = -0.000000e+00 [m3/s] (inflow)
+ Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+TIME =  1.000000e+03	hyd. Time Step =   1.000000e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+ Qout[2]     = 8.683266e+00 [m3/s] (outflow)
+TIME =  2.000000e+03	hyd. Time Step =   3.838803e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+ Qout[2]     = 1.260764e+01 [m3/s] (outflow)
+TIME =  3.000000e+03	hyd. Time Step =   1.000000e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.305800e+01 [m3/s] (inflow)
+ Qout[2]     = 1.302894e+01 [m3/s] (outflow)
+TIME =  4.000000e+03	hyd. Time Step =   4.173108e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.311300e+01 [m3/s] (inflow)
+ Qout[2]     = 1.306455e+01 [m3/s] (outflow)
+TIME =  5.000000e+03	hyd. Time Step =   2.930276e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.316833e+01 [m3/s] (inflow)
+ Qout[2]     = 1.314378e+01 [m3/s] (outflow)
+TIME =  6.000000e+03	hyd. Time Step =   3.211746e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.312900e+01 [m3/s] (inflow)
+ Qout[2]     = 1.315105e+01 [m3/s] (outflow)
+TIME =  7.000000e+03	hyd. Time Step =   5.292637e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.314466e+01 [m3/s] (inflow)
+ Qout[2]     = 1.311703e+01 [m3/s] (outflow)
+TIME =  8.000000e+03	hyd. Time Step =   1.217104e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.325600e+01 [m3/s] (inflow)
+ Qout[2]     = 1.321617e+01 [m3/s] (outflow)
+TIME =  9.000000e+03	hyd. Time Step =   4.217936e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.322400e+01 [m3/s] (inflow)
+ Qout[2]     = 1.324556e+01 [m3/s] (outflow)
+TIME =  1.000000e+04	hyd. Time Step =   1.788865e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.321600e+01 [m3/s] (inflow)
+ Qout[2]     = 1.322644e+01 [m3/s] (outflow)
+TIME =  1.100000e+04	hyd. Time Step =   5.419219e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.309733e+01 [m3/s] (inflow)
+ Qout[2]     = 1.313802e+01 [m3/s] (outflow)
+TIME =  1.200000e+04	hyd. Time Step =   3.429412e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.301100e+01 [m3/s] (inflow)
+ Qout[2]     = 1.306112e+01 [m3/s] (outflow)
+TIME =  1.300000e+04	hyd. Time Step =   5.472637e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.304234e+01 [m3/s] (inflow)
+ Qout[2]     = 1.304272e+01 [m3/s] (outflow)
+TIME =  1.400000e+04	hyd. Time Step =   1.576382e-03 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.303500e+01 [m3/s] (inflow)
+ Qout[2]     = 1.302491e+01 [m3/s] (outflow)
+TIME =  1.500000e+04	hyd. Time Step =   1.228596e-02 (SD: La_Dranse_2024_10_17)
+ Qin[1]      = 1.317600e+01 [m3/s] (inflow)
+ Qout[2]     = 1.309696e+01 [m3/s] (outflow)
+-> Domain: Run Time of the simulation= 356.574 sec
+-> Domain: Finished simulation.
+
+*/

@@ -1,0 +1,3 @@
+#Zeitstempel	Wert
+0	10.52
+15000	13
