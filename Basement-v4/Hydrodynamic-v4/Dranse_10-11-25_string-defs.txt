@@ -1,0 +1,10 @@
+STRINGDEF {
+	name = inflow
+	node_ids = (331 557 1854 1836 1855 1853 499 1960 1890 1935 1937 317)
+	upstream_direction = right
+}
+STRINGDEF {
+	name = outflow
+	node_ids = (241 786 2005 710 1919 1931 285)
+	upstream_direction = right
+}

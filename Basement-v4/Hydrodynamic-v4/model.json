@@ -1,0 +1,26 @@
+{
+  "SETUP": {
+    "BASEHPC": {
+      "BASEPLANE_2D": {
+        "GEOMETRY": {
+          "mesh_file": "C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Hydrodynamic-v4/Dranse_computational_mesh_10_11_25.2dm"
+        },
+        "HYDRAULICS": {
+          "INITIAL": {
+            "type": "dry"
+          },
+          "PARAMETER": {
+            "CFL": 0.9,
+            "fluid_density": 1000,
+            "max_time_step": 100,
+            "minimum_water_depth": 0.01
+          }
+        }
+      },
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81
+      }
+    },
+    "simulation_name": "Dranse_17-10-2024"
+  }
+}

@@ -1,0 +1,11 @@
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary

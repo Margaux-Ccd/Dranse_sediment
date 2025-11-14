@@ -1,0 +1,29 @@
+{
+    "SIMULATION":{
+        "TIME": {
+            "start": 0.0,
+            "end": 84000,
+            "out": 2000
+        },
+        "OUTPUT": [
+            "water_surface",
+            "ns_hyd_discharge",
+            "bottom_elevation",
+            "spec_discharge",
+            "water_depth",
+            "delta_z",
+            "ns_mor_discharge",
+            "active_layer_thickness",
+            "active_layer_fractions",
+            "sublayer_fractions0",
+            "sublayer_fractions1",
+            "sublayer_elevations",
+            "dm_arithmetic",
+            "dm_geometric",
+            "d_16",
+            "d_50",
+            "d_84",
+            "d_90"
+        ]
+    }
+}

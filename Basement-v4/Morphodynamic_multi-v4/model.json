@@ -1,0 +1,289 @@
+{
+    "SETUP": {
+        "simulation_name": "D_morphology_mixed",
+        "BASEHPC": {
+            "PHYSICAL_PROPERTIES": {
+                "gravity": 9.81
+            },
+            "BASEPLANE_2D": {
+                "GEOMETRY": {
+                    "INTERPOLATION": {
+                        "method": "weighted"
+                    },
+                    "REGIONDEF": [
+                        {"index": [1],
+                            "name": "one"},
+                        {"index": [2],
+                            "name": "two"},
+                        {"index": [3],
+                            "name": "three"},
+                        {"index": [4],
+                            "name": "four"},
+                        {"index": [5],
+                            "name": "five"},
+                        {"index": [6],
+                            "name": "six"},
+                        {"index": [7],
+                            "name": "seven"},
+                        {"index": [8],
+                            "name": "eight"},
+                        {"index": [9],
+                            "name": "nine"},
+                        {"index": [10],
+                            "name": "ten"},
+                        {"index": [11],
+                            "name": "eleven"},
+                        {"index": [12],
+                            "name": "twelve"}
+                    ],
+                    "STRINGDEF": [
+                        {"name": "Inflow",
+                            "upstream_direction": "left"},
+                        {"name": "Outflow",
+                            "upstream_direction": "left"}
+                    ],
+                    "mesh_file": "Flaz_mesh.2dm"
+                },
+                "HYDRAULICS": {
+                    "BOUNDARY": {
+                        "STANDARD": [
+                            {
+                                "discharge_file": "Inflow_transient.txt",
+                                "name": "Inflow",
+                                "slope": 0.02,
+                                "string_name": "Inflow",
+                                "type": "uniform_in"
+                            },
+                            {
+                                "name": "Outflow",
+                                "slope": 0.02,
+                                "string_name": "Outflow",
+                                "type": "uniform_out"
+                            }
+                        ]
+                    },
+                    "FRICTION": {
+                        "default_friction": 30,
+                        "regions": [
+                            {"friction": 28.0,
+                                "region_name": "one"},
+                            {"friction": 30.0,
+                                "region_name": "two"},
+                            {"friction": 35.0,
+                                "region_name": "three"},
+                            {"friction": 30.0,
+                                "region_name": "four"},
+                            {"friction": 30.0,
+                                "region_name": "five"},
+                            {"friction": 30.0,
+                                "region_name": "six"},
+                            {"friction": 32.0,
+                                "region_name": "seven"},
+                            {"friction": 32.0,
+                                "region_name": "eight"},
+                            {"friction": 35.0,
+                                "region_name": "nine"},
+                            {"friction": 28.0,
+                                "region_name": "ten"},
+                            {"friction": 28.0,
+                                "region_name": "eleven"},
+                            {"friction": 28.0,
+                                "region_name": "twelve"}
+                        ],
+                        "type": "strickler"
+                    },
+                    "INITIAL": {
+                        "file": "../A_Stationary/results.h5",
+                        "time": 3000.0,
+                        "type": "continue"
+                    },
+                    "PARAMETER": {
+                        "CFL": 0.95,
+                        "fluid_density": 1000.0,
+                        "max_time_step": 100,
+                        "minimum_water_depth": 0.002
+                    }
+                },
+                "MORPHOLOGY": {
+                    "INITIAL":{
+                        "type": "mesh"
+                    },
+                    "PARAMETER": {
+                        "morphodynamic_start": 0.0,
+                        "sediment_porosity": 0.4,
+                        "sediment_density" : 2650.0,
+                        "morphodynamic_solver": "Upwind",
+                        "upwind_factor": 0.8,
+                        "ACTIVE_LAYER": {
+                        "active_layer_type": "constant",
+                        "active_layer_thickness": 0.1
+                        }
+                    },
+                    "BEDMATERIAL": {
+                        "PARAMETER": {
+                            "correction_accuracy": 0.001,
+                            "max_iteration": 10
+                        },
+                        "GRAIN_CLASS": {
+                            "diameters": [0.001, 0.005, 0.015, 0.044, 0.082, 0.150]
+                        },
+                        "MIXTURE": [
+                            {
+                                "name": "mixture_inflow",
+                                "volume_fraction": [15, 15, 23, 27, 10, 10]
+                            },
+                            {
+                                "name": "mixture_element_roughness",
+                                "volume_fraction": [17, 11, 14, 27, 14, 17]
+                            },
+                            {
+                                "name": "mixture_widening",
+                                "volume_fraction": [21, 13, 16, 25, 11, 14]
+                            },
+                            {
+                                "name": "mixture_alt_bars",
+                                "volume_fraction": [27, 14, 14, 20, 14, 11]
+                            }
+                        ],
+                        "SOILDEF": [
+                            {
+                                "name": "soil_element_roughness",
+                                "LAYER": [
+                                    {"z_rel": -0.8,
+                                    "mixture_name": "mixture_element_roughness"}
+                                ]
+                            },
+                            {
+                                "name": "soil_widening",
+                                "LAYER": [
+                                    {"z_rel": -2.0,
+                                    "mixture_name": "mixture_widening"}
+                                ]
+                            },
+                            {
+                                "name": "soil_alt_bars",
+                                "LAYER": [
+                                    {
+                                        "z_rel": -2.0,
+                                        "mixture_name": "mixture_alt_bars"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "soil_fix",
+                                "LAYER": [
+                                    {
+                                        "z_rel": -0.0,
+                                        "mixture_name": "mixture_element_roughness"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "soil_fix_20",
+                                "LAYER": [
+                                    {
+                                        "z_rel": -0.2,
+                                        "mixture_name": "mixture_element_roughness"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "soil_fix_40",
+                                "LAYER": [
+                                    {
+                                        "z_rel": -0.4,
+                                        "mixture_name": "mixture_element_roughness"
+                                    }
+                                ]
+                            }
+                        ],
+                        "SOIL_ASSIGNMENT": {
+                            "default_soil": "soil_fix",
+                            "regions": [
+                                {
+                                "region_name": "one",
+                                "soil_name": "soil_element_roughness"
+                                },
+                                {
+                                "region_name": "two",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "three",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "four",
+                                "soil_name": "soil_widening"
+                                },
+                                {
+                                "region_name": "five",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "six",
+                                "soil_name": "soil_widening"
+                                },
+                                {
+                                "region_name": "seven",
+                                "soil_name": "soil_alt_bars"
+                                },
+                                {
+                                "region_name": "eight",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "nine",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "ten",
+                                "soil_name": "soil_fix"
+                                },
+                                {
+                                "region_name": "eleven",
+                                "soil_name": "soil_fix_20"
+                                },
+                                {
+                                "region_name": "twelve",
+                                "soil_name": "soil_fix_40"
+                                }
+                            ]
+                        }
+                    },
+                    "BEDLOAD": {
+                        "FORMULA": {
+                            "type": "MPM_multi",
+                            "factor":1.0,
+                            "coefficient":3.2,
+                            "exponent":1.6,
+                            "theta_critical_approach": "constant",
+                            "critical_value":0.047
+                        },
+                        "DIRECTION": {
+                            "LATERAL_SLOPE": {
+                                "factor": 1.5
+                            }
+                        },
+                        "BOUNDARY":{
+                            "STANDARD": [
+                                {
+                                    "name": "inflow_MOR",
+                                    "string_name": "Inflow",
+                                    "type": "transport_capacity",
+                                    "boundary_factor": 0.8
+                                },
+                                {
+                                    "name": "outflow_MOR",
+                                    "string_name": "Outflow",
+                                    "type": "equilibrium_out",
+                                    "reference_bed_elevation": 1700.68
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

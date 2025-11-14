@@ -1,0 +1,64 @@
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEHPC setup binary
+STDOUT :  -> composing the model from the input file
+STDOUT :  -> found aggregate <hydraulics_aggr>
+STDOUT :  -> running on 1 threads
+STDOUT :  -> generating the content from the model components ...
+STDOUT :  -> model component <EdgesAll/FluxesHy> is internal -> no content defined!
+STDOUT :  -> model component <CellsAll/IsWetted> is internal -> no content defined!
+STDOUT :  -> model component <Parameters/InvGravity> is internal -> no content defined!
+STDOUT :  -> check consistency of generated content...
+STDOUT :  -> go through the tree!
+STDOUT :  -> succesfully validated the input file <C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Hydrodynamic-v4/model.json>
+STDOUT :  -> creating the hdf5 file <C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Hydrodynamic-v4/setup.h5>...
+STDOUT :  -> generating the content from the model components ...
+STDOUT :  -> model component <EdgesAll/FluxesHy> is internal -> no content defined!
+STDOUT :  -> model component <CellsAll/IsWetted> is internal -> no content defined!
+STDOUT :  -> model component <Parameters/InvGravity> is internal -> no content defined!
+STDOUT :  -> check consistency of generated content...
+STDOUT :  -> go through the tree!
+STDOUT :  -> reading the mesh file <C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Hydrodynamic-v4/Flaz_mesh.2dm> ...
+STDOUT :  -> time for mesh file parsing: 0.042s
+STDOUT :  -> Number of Nodes: 7446
+STDOUT :  -> writing (1/1) data of type '1' to NodesAll/set
+STDOUT :  -> writing (7446/3) data of type '2' to NodesAll/Coordnts
+STDOUT :  -> writing (14457/3) data of type '1' to CellsAll/Topology
+STDOUT :  -> Number of cells: 14457
+STDOUT :  -> writing (1/1) data of type '1' to CellsAll/set
+STDOUT :  -> writing (14457/1) data of type '2' to CellsAll/GeomArea
+STDOUT :  -> writing (14457/3) data of type '1' to CellsAll/EdgesAll
+STDOUT :  -> Number of edges: 21902
+STDOUT :  -> writing (1/1) data of type '1' to EdgesAll/set
+STDOUT :  -> writing (21902/1) data of type '2' to EdgesAll/GeomLeng
+STDOUT :  -> writing (21902/2) data of type '2' to EdgesAll/NormVect
+STDOUT :  -> writing (21902/2) data of type '2' to EdgesAll/CharSize
+STDOUT :  -> Number of shallow water edges: 21469
+STDOUT :  -> Number of wall boundary edges: 433
+STDOUT :  -> Number of boundary edges: 0
+STDOUT :  -> writing (21902/2) data of type '1' to EdgesAll/CellsAll
+STDOUT :  -> writing (1/1) data of type '1' to EdgesSWE/set
+STDOUT :  -> writing (21469/1) data of type '1' to EdgesSWE/EdgesAll
+STDOUT :  -> writing (21469/2) data of type '1' to EdgesSWE/CellsAll
+STDOUT :  -> writing (1/1) data of type '1' to EdgHydWL/set
+STDOUT :  -> writing (433/1) data of type '1' to EdgHydWL/EdgesAll
+STDOUT :  -> writing (433/1) data of type '1' to EdgHydWL/CellsAll
+STDOUT :  -> WARNING: <NodeStrg/StrNames> has no contents, nothing is written in the runfile (.h5)
+STDOUT :  -> writing (1/1) data of type '2' to Parameters/CFLnumber
+STDOUT :  -> writing (1/1) data of type '2' to Parameters/DTmax
+STDOUT :  -> writing (1/1) data of type '2' to Parameters/MinWaterDepth
+STDOUT :  -> writing (1/1) data of type '2' to Parameters/Gravity
+STDOUT :  -> writing (1/1) data of type '2' to Parameters/MorphStart
+STDOUT :  -> writing (1/1) data of type '1' to Parameters/SafeMode
+STDOUT :  -> writing (14457/3) data of type '1' to CellsAll/EdgeSign
+STDOUT :  -> Number of NodeStrings: 0
+STDOUT :  -> writing (1/1) data of type '1' to NodeStrg/set
+STDOUT :  -> writing (14457/1) data of type '2' to CellsAll/BottomEl
+STDOUT :  -> writing (14457/3) data of type '2' to CellsAll/HydState
+STDOUT :  -> WARNING: Content <CellsAll/HydState> has dependency relicts:
+STDOUT :  -> WARNING: <matid_region_names>
+STDOUT :  -> WARNING: <matid_region_names>
+STDOUT :  -> writing the kernel execution information...
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
