@@ -1,0 +1,294 @@
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary
+STDERR :  -> unhandled exception (actually, this should never happen)
+STDERR :  -> bad allocation
+STDERR :  -> ... unfortunately BASEMENT is killed!
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary
+STDERR : 
+STDERR : WARNING -> Block-Error in Block SPECIAL_OUTPUT:
+STDERR :    * Output of type 'deltaz' defined in 'values' can not be generated without 
+STDERR :    morphological simulation.
+STDERR : 
+STDERR : ERROR -> Your input has errors.
+STDERR :    Input file has 0 warnings and 1 error
+STDOUT : Simulation stopped due to error(s).
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.2.0 (v4.2.0)
+STDOUT : BASEMD omp binary
+STDOUT : -> Domain: Input file has been successfully parsed and passed preliminary 
+STDOUT :    validation
+STDOUT : -> *** Start Simulation ***
+STDOUT : -> OpenMP: Computation is executed in parallel using 8 threads
+STDOUT : -> Domain Initialized
+STDOUT : -> initialize domain done
+STDOUT : -> initialize networkcommunication done
+STDOUT : -> BASEplane: Initialization of SubDomain 'Dranse
+STDOUT : -> Reserving the vectors for nodes, elements & edges
+STDOUT : -> InputSMS: Number of Nodes = 2299
+STDOUT : -> InputSMS: Number of Elements = 4367
+STDOUT : -> InputSMS: Number of Nodestrings = 2
+STDOUT : -> Checking disjoint nodes ...
+STDOUT : -> Checking the area of elements ...
+STDERR : 
+STDERR : WARNING -> Some elements in the mesh have very small area!
+STDERR :    These elements may cause instabilities in the program!
+STDERR :    See the file geofile_Grid.err for the element numbers.
+STDOUT : -> Checking the aspect ratio of elements ...
+STDOUT : -> Checking for concave quadrilateral elements ...
+STDOUT : -> Checking for ambiguous quadrilateral elements ...
+STDOUT : -> InputSMS: Number of Edges = 6665
+STDOUT : -> InputSMS: Total mesh area = 28396.7 m2
+STDOUT : -> BASEplane: Determine first time step delta_t = 1
+STDOUT : -> Domain: Starting time loop
+STDOUT : TIME =  0.000000e+00	hyd. Time Step =   1.000000e+00 (SD: Dranse)
+STDOUT :  Qin[1]      = -0.000000e+00 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.000000e+02	hyd. Time Step =   4.645269e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.311333e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.000000e+02	hyd. Time Step =   5.083175e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.309767e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.000000e+02	hyd. Time Step =   1.489882e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.000000e+02	hyd. Time Step =   5.771510e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.000000e+02	hyd. Time Step =   7.154766e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.000000e+02	hyd. Time Step =   7.471750e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.000000e+02	hyd. Time Step =   7.517607e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.000000e+02	hyd. Time Step =   7.529154e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.000000e+02	hyd. Time Step =   7.524919e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.000000e+03	hyd. Time Step =   7.516842e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.100000e+03	hyd. Time Step =   7.541721e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.200000e+03	hyd. Time Step =   7.524481e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.300000e+03	hyd. Time Step =   7.511396e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.400000e+03	hyd. Time Step =   7.562821e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.500000e+03	hyd. Time Step =   7.548324e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.600000e+03	hyd. Time Step =   6.894019e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.700000e+03	hyd. Time Step =   6.344872e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.800000e+03	hyd. Time Step =   6.291100e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.900000e+03	hyd. Time Step =   6.288340e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.000000e+03	hyd. Time Step =   6.265111e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.308200e+01 [m3/s] (inflow)
+STDOUT : 
+STDOUT : -> Domain: Run Time of the simulation= 32.922 sec
+STDOUT : -> Domain: Finished simulation.
+STDOUT : 
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
