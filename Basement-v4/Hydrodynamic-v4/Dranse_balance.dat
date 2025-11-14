@@ -1,6 +1,6 @@
 # time[s]   	hydraulic_timestep[s] 	Element    	Edge      
 0 	         1 	        -1 	        -1
 1000 	0.007516842 	       561 	      1413
-2000 	0.0062651112 	       561 	      1413
+2000 	0.00630725935 	       561 	      1413
 
-# Run Time of the simulation= 32.922 sec
+# Run Time of the simulation= 26.332 sec

@@ -21,7 +21,7 @@
             "BOUNDARY": [
               {
                 "dynamic_slope": "no",
-                "file": "C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Morphodynamic_single-v4/Inflow_stationary.txt",
+                "file": "C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Morphodynamic_single-v4/Discharge_scanperiod_5min.txt",
                 "max_interval": 20.0,
                 "number_of_iterations": 5000,
                 "precision": -1.0,
@@ -286,6 +286,6 @@
       },
       "multiregion": "Dranse"
     },
-    "simulation_name": "Dranse_single"
+    "simulation_name": "Dranse_single_1"
   }
 }

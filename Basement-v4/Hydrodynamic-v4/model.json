@@ -30,6 +30,10 @@
                 "type": "hydrograph",
                 "weighting_type": "conveyance",
                 "wse_calc_method": "average"
+              },
+              {
+                "type": "zero_gradient",
+                "string_name": "outflow"
               }
             ],
             "FRICTION": {
