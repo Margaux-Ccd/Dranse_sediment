@@ -7,33 +7,55 @@
             "STRINGDEF": [
               {
                 "name": "inflow",
-                "upstream_direction": "right"
+                "upstream_direction": "right",
+                "node_ids": [
+                  1880,
+                  328,
+                  487,
+                  433,
+                  490,
+                  484,
+                  241,
+                  1005,
+                  595,
+                  930,
+                  936
+                ]
               },
               {
                 "name": "outflow",
-                "upstream_direction": "right"
+                "upstream_direction": "right",
+                "node_ids": [
+                  1741,
+                  1389,
+                  1140,
+                  1313,
+                  882,
+                  918
+                ]
               }
             ],
-            "file": "C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Morphodynamic_single-v4/La Dranse_computational-mesh_13-11-2025.2dm",
+            "file": "/La Dranse_computational-mesh_13-11-2025.2dm",
             "type": "2dm"
           },
           "HYDRAULICS": {
             "BOUNDARY": [
               {
                 "dynamic_slope": "no",
-                "file": "C:/Users/marga/Documents/EPFL/Cours/S3/Dranse/BASEMENT_model/Dranse_sediment/Basement-v4/Morphodynamic_single-v4/Discharge_scanperiod_5min.txt",
+                "file": "/Discharge_scanperiod_5min.txt",
                 "max_interval": 20.0,
                 "number_of_iterations": 5000,
                 "precision": -1.0,
                 "slope": 20.6,
                 "string_name": "inflow",
                 "type": "hydrograph",
-                "weighting_type": "conveyance",
+                "weighting_type": "area",
                 "wse_calc_method": "average"
               },
               {
-                "type": "zero_gradient",
-                "string_name": "outflow"
+                "type": "hqrelation",
+                "string_name": "outflow",
+                "slope": 20.6
               }
             ],
             "FRICTION": {
@@ -52,7 +74,9 @@
               "wall_friction": "on"
             },
             "INITIAL": {
-              "type": "dry"
+              "type": "continue",
+              "file": "/Dranse_restart_hydro.h5",
+              "restart_solution_time": -1
             },
             "PARAMETER": {
               "dynamic_depth_solver": "on",
@@ -71,7 +95,7 @@
             "BEDLOAD": {
               "BOUNDARY": [
                 {
-                  "factor": 0.7,
+                  "factor": 1.0,
                   "mixture": "single_grain",
                   "string_name": "inflow",
                   "type": "transport_capacity"
@@ -274,7 +298,7 @@
             "minimum_time_step": 0.001,
             "morph_cycle": "off",
             "start_time": 0.0,
-            "total_run_time": 2000.0
+            "total_run_time": 10000.0
           },
           "region_name": "Dranse"
         }

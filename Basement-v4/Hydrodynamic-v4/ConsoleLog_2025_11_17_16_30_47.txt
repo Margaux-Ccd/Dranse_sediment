@@ -1,0 +1,3673 @@
+STDOUT : BASEMENT v4.1.0 (v4.1.0)
+STDOUT : BASEMD setup binary
+STDOUT :  -> Command file for BASEMD domain provided.
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 
+STDOUT : BASEMENT v4.1.0 (v4.1.0)
+STDOUT : BASEMD omp binary
+STDOUT : -> Domain: Input file has been successfully parsed and passed preliminary 
+STDOUT :    validation
+STDOUT : -> *** Start Simulation ***
+STDOUT : -> OpenMP: Computation is executed in parallel using 8 threads
+STDOUT : -> Domain Initialized
+STDOUT : -> initialize domain done
+STDOUT : -> initialize networkcommunication done
+STDOUT : -> BASEplane: Initialization of SubDomain 'Dranse
+STDOUT : -> Reserving the vectors for nodes, elements & edges
+STDOUT : -> InputSMS: Number of Nodes = 2299
+STDOUT : -> InputSMS: Number of Elements = 4367
+STDOUT : -> Checking disjoint nodes ...
+STDOUT : -> Checking the area of elements ...
+STDERR : 
+STDERR : WARNING -> Some elements in the mesh have very small area!
+STDERR :    These elements may cause instabilities in the program!
+STDERR :    See the file geofile_Grid.err for the element numbers.
+STDOUT : -> Checking the aspect ratio of elements ...
+STDOUT : -> Checking for concave quadrilateral elements ...
+STDOUT : -> Checking for ambiguous quadrilateral elements ...
+STDOUT : -> InputSMS: Number of Edges = 6665
+STDOUT : -> InputSMS: Total mesh area = 28396.7 m2
+STDOUT : -> BASEplane: Determine first time step delta_t = 1
+STDOUT : -> Domain: Starting time loop
+STDOUT : TIME =  0.000000e+00	hyd. Time Step =   1.000000e+00 (SD: Dranse)
+STDOUT :  Qin[1]      = -0.000000e+00 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.000000e+02	hyd. Time Step =   2.179952e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.000000e+02	hyd. Time Step =   3.964445e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.000000e+02	hyd. Time Step =   4.123242e-03 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.000000e+02	hyd. Time Step =   5.725933e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.000000e+02	hyd. Time Step =   5.922996e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.000000e+02	hyd. Time Step =   5.927803e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 0.000000e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.000000e+02	hyd. Time Step =   5.927969e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 3.941429e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.000000e+02	hyd. Time Step =   5.927702e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 5.876643e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.000000e+02	hyd. Time Step =   5.927334e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 7.339778e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.000000e+03	hyd. Time Step =   5.927782e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 8.502645e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.100000e+03	hyd. Time Step =   5.927959e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 9.403114e+00 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.200000e+03	hyd. Time Step =   5.927595e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.013281e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.300000e+03	hyd. Time Step =   5.927022e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.069906e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.400000e+03	hyd. Time Step =   5.927890e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.115181e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.500000e+03	hyd. Time Step =   5.927816e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.151472e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.600000e+03	hyd. Time Step =   5.926619e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.182299e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.700000e+03	hyd. Time Step =   5.928012e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.206659e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.800000e+03	hyd. Time Step =   5.928098e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]   
+STDOUT :   = 1.224464e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.900000e+03	hyd. Time Step =   5.927628e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.242305e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.000000e+03	hyd. Time Step =   5.927901e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.252038e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.100000e+03	hyd. Time Step =   5.927032e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.265037e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.200000e+03	hyd. Time Step =   5.936894e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.272557e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.300000e+03	hyd. Time Step =   5.943279e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.279282e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.400000e+03	hyd. Time Step =   5.943099e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.285642e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.500000e+03	hyd. Time Step =   5.943170e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.289022e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.600000e+03	hyd. Time Step =   5.943105e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.293992e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.700000e+03	hyd. Time Step =   5.943197e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.296452e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.800000e+03	hyd. Time Step =   5.942633e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.298706e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.900000e+03	hyd. Time Step =   5.942908e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.301430e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.000000e+03	hyd. Time Step =   5.943040e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.301973e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.100000e+03	hyd. Time Step =   5.943081e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.304473e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.200000e+03	hyd. Time Step =   5.943167e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.305153e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.300000e+03	hyd. Time Step =   5.943194e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.305490e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.400000e+03	hyd. Time Step =   5.942875e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.307331e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.500000e+03	hyd. Time Step =   5.943419e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.306760e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.600000e+03	hyd. Time Step =   5.942860e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.308193e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : Progress
+STDOUT : : 7/100
+STDOUT : 
+STDOUT : TIME =  3.700000e+03	hyd. Time Step =   5.943736e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.308468e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.800000e+03	hyd. Time Step =   5.943173e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.307705e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.900000e+03	hyd. Time Step =   5.943374e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309503e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.000000e+03	hyd. Time Step =   5.943263e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.308694e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.100000e+03	hyd. Time Step =   5.943712e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309427e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.200000e+03	hyd. Time Step =   5.943201e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309311e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.300000e+03	hyd. Time Step =   5.943220e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.308604e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.400000e+03	hyd. Time Step =   5.942935e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310427e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.500000e+03	hyd. Time Step =   5.943498e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309471e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.600000e+03	hyd. Time Step =   5.943295e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309570e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.700000e+03	hyd. Time Step =   5.942986e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310322e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.800000e+03	hyd. Time Step =   5.943313e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309085e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.900000e+03	hyd. Time Step =   5.943050e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310510e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.000000e+03	hyd. Time Step =   5.942905e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309777e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.100000e+03	hyd. Time Step =   5.943033e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309472e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.200000e+03	hyd. Time Step =   5.943309e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310696e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.300000e+03	hyd. Time Step =   5.942891e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309040e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.400000e+03	hyd. Time Step =   5.943468e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310494e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.500000e+03	hyd. Tim
+STDOUT : e Step =   5.942762e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310096e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.600000e+03	hyd. Time Step =   5.943204e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309477e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.700000e+03	hyd. Time Step =   5.943042e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310703e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.800000e+03	hyd. Time Step =   5.943213e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309334e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.900000e+03	hyd. Time Step =   5.943090e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310102e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.000000e+03	hyd. Time Step =   5.943602e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310202e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.100000e+03	hyd. Time Step =   5.943743e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309345e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.200000e+03	hyd. Time Step =   5.944066e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310606e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.300000e+03	hyd. Time Step =   5.943237e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309612e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.400000e+03	hyd. Time Step =   5.943121e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309878e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.500000e+03	hyd. Time Step =   5.942947e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310338e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.600000e+03	hyd. Time Step =   5.943022e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309349e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.700000e+03	hyd. Time Step =   5.943240e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310692e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.800000e+03	hyd. Time Step =   5.943033e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309647e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  6.900000e+03	hyd. Time Step =   5.943375e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309761e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.000000e+03	hyd. Time Step =   5.943668e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310620e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.100000e+03	hyd. Time Step =   5.943393e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309299e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.200000e+03	hyd. Time Step =   5.943432e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310668e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7
+STDOUT : .300000e+03	hyd. Time Step =   5.943346e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309907e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.400000e+03	hyd. Time Step =   5.943565e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309667e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.500000e+03	hyd. Time Step =   5.943297e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310576e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.600000e+03	hyd. Time Step =   5.942968e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309353e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.700000e+03	hyd. Time Step =   5.942950e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310623e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.800000e+03	hyd. Time Step =   5.943013e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310153e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  7.900000e+03	hyd. Time Step =   5.943181e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309401e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.000000e+03	hyd. Time Step =   5.943648e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310575e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.100000e+03	hyd. Time Step =   5.943165e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309398e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.200000e+03	hyd. Time Step =   5.943457e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310301e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.300000e+03	hyd. Time Step =   5.943605e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310111e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.400000e+03	hyd. Time Step =   5.943314e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309201e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.500000e+03	hyd. Time Step =   5.943131e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310883e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.600000e+03	hyd. Time Step =   5.943822e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309347e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.700000e+03	hyd. Time Step =   5.942925e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310136e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.800000e+03	hyd. Time Step =   5.942921e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310451e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  8.900000e+03	hyd. Time Step =   5.943019e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309518e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.000000e+03	hyd. Time Step =   5.943189e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310791e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : Progre
+STDOUT : ss: 18/100
+STDOUT : TIME =  9.100000e+03	hyd. Time Step =   5.943626e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309776e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.200000e+03	hyd. Time Step =   5.943154e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309946e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.300000e+03	hyd. Time Step =   5.943716e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310485e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.400000e+03	hyd. Time Step =   5.943699e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309297e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.500000e+03	hyd. Time Step =   5.943347e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310671e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.600000e+03	hyd. Time Step =   5.943434e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310018e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.700000e+03	hyd. Time Step =   5.943248e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309558e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.800000e+03	hyd. Time Step =   5.942932e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310624e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  9.900000e+03	hyd. Time Step =   5.942944e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309427e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.000000e+04	hyd. Time Step =   5.943029e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310789e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.010000e+04	hyd. Time Step =   5.943196e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310195e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.020000e+04	hyd. Time Step =   5.943678e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309522e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.030000e+04	hyd. Time Step =   5.943244e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310752e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.040000e+04	hyd. Time Step =   5.943506e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309498e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.050000e+04	hyd. Time Step =   5.943656e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310386e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.060000e+04	hyd. Time Step =   5.943242e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310265e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.070000e+04	hyd. Time Step =   5.943103e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309234e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.080000e+04	hyd. Time Step =   5.943826e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310734e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : Pro
+STDOUT : gress: 21/100
+STDOUT : TIME =  1.090000e+04	hyd. Time Step =   5.942956e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309623e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.100000e+04	hyd. Time Step =   5.942929e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310119e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.110000e+04	hyd. Time Step =   5.943014e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310230e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.120000e+04	hyd. Time Step =   5.943187e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309198e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.130000e+04	hyd. Time Step =   5.943686e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310785e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.140000e+04	hyd. Time Step =   5.943247e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309950e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.150000e+04	hyd. Time Step =   5.943506e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309744e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.160000e+04	hyd. Time Step =   5.943636e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310344e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.170000e+04	hyd. Time Step =   5.943358e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309255e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.180000e+04	hyd. Time Step =   5.943074e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310698e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.190000e+04	hyd. Time Step =   5.943089e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309992e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.200000e+04	hyd. Time Step =   5.943016e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309650e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.210000e+04	hyd. Time Step =   5.943253e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310627e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.220000e+04	hyd. Time Step =   5.943014e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309217e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.230000e+04	hyd. Time Step =   5.943434e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310452e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.240000e+04	hyd. Time Step =   5.943684e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310125e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.250000e+04	hyd. Time Step =   5.943167e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309408e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.260000e+04	hyd. Time Step =   5.943492e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310708e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.270000e+04	hyd. Time Step =   5.943626e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309296e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.280000e+04	hyd. Time Step =   5.943352e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310455e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.290000e+04	hyd. Time Step =   5.943054e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310386e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.300000e+04	hyd. Time Step =   5.943164e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309433e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.310000e+04	hyd. Time Step =   5.942985e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310819e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.320000e+04	hyd. Time Step =   5.943258e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309532e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.330000e+04	hyd. Time Step =   5.943047e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309996e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.340000e+04	hyd. Time Step =   5.943157e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310373e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.350000e+04	hyd. Time Step =   5.943918e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309350e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.360000e+04	hyd. Time Step =   5.943286e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310618e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.370000e+04	hyd. Time Step =   5.943388e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309801e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.380000e+04	hyd. Time Step =   5.943606e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309855e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.390000e+04	hyd. Time Step =   5.943345e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310512e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.400000e+04	hyd. Time Step =   5.943042e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309246e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.410000e+04	hyd. Time Step =   5.943155e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310638e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.420000e+04	hyd. Time Step =   5.943098e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309985e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.430000e+04	hyd. Time Step =   5.943290e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309593e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.440000e+04	hyd. Time Step =   5.943034e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310470e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.4500
+STDOUT : 00e+04	hyd. Time Step =   5.943164e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309257e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.460000e+04	hyd. Time Step =   5.943929e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310406e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.470000e+04	hyd. Time Step =   5.943264e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310220e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.480000e+04	hyd. Time Step =   5.943467e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309481e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.490000e+04	hyd. Time Step =   5.943578e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310710e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.500000e+04	hyd. Time Step =   5.943337e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309460e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.510000e+04	hyd. Time Step =   5.943032e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310206e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.520000e+04	hyd. Time Step =   5.943155e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310192e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.530000e+04	hyd. Time Step =   5.943094e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309518e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.540000e+04	hyd. Time Step =   5.943364e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310709e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.550000e+04	hyd. Time Step =   5.943126e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309494e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.560000e+04	hyd. Time Step =   5.943136e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310055e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.570000e+04	hyd. Time Step =   5.943316e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310347e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.580000e+04	hyd. Time Step =   5.943844e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309190e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.590000e+04	hyd. Time Step =   5.943432e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310724e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.600000e+04	hyd. Time Step =   5.943592e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309734e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.610000e+04	hyd. Time Step =   5.943332e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309789e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.620000e+04	hyd. Time Step =   5.942947e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310494e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.630000e+04	hyd. Time Step =   5.943115e-02 (SD: Dran
+STDOUT : se)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309251e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.640000e+04	hyd. Time Step =   5.943084e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310653e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.650000e+04	hyd. Time Step =   5.943373e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309845e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.660000e+04	hyd. Time Step =   5.943136e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309695e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.670000e+04	hyd. Time Step =   5.943233e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310455e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.680000e+04	hyd. Time Step =   5.943403e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309196e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.690000e+04	hyd. Time Step =   5.943423e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310565e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.700000e+04	hyd. Time Step =   5.943676e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309854e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.710000e+04	hyd. Time Step =   5.943102e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309103e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.720000e+04	hyd. Time Step =   5.943493e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310675e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.730000e+04	hyd. Time Step =   5.943335e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309459e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.740000e+04	hyd. Time Step =   5.943135e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310366e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.750000e+04	hyd. Time Step =   5.943060e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310411e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.760000e+04	hyd. Time Step =   5.943352e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309580e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.770000e+04	hyd. Time Step =   5.943138e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310980e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.780000e+04	hyd. Time Step =   5.943242e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309351e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.790000e+04	hyd. Time Step =   5.943410e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310236e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.800000e+04	hyd. Time Step =   5.943420e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310582e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.810000e+04	hyd. Time Step =   5.943717e-02 (SD: D
+STDOUT : ranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309353e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.820000e+04	hyd. Time Step =   5.943180e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310760e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.830000e+04	hyd. Time Step =   5.943178e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309764e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.840000e+04	hyd. Time Step =   5.943098e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309747e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.850000e+04	hyd. Time Step =   5.943340e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310525e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.860000e+04	hyd. Time Step =   5.943312e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309380e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.870000e+04	hyd. Time Step =   5.943396e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310578e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.880000e+04	hyd. Time Step =   5.943132e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309667e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.890000e+04	hyd. Time Step =   5.943225e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309342e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.900000e+04	hyd. Time Step =   5.943391e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310674e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.910000e+04	hyd. Time Step =   5.943405e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309178e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.920000e+04	hyd. Time Step =   5.943705e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310561e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.930000e+04	hyd. Time Step =   5.943174e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310162e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.940000e+04	hyd. Time Step =   5.943162e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309486e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.950000e+04	hyd. Time Step =   5.943210e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310768e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.960000e+04	hyd. Time Step =   5.943230e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309470e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.970000e+04	hyd. Time Step =   5.942921e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310278e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.980000e+04	hyd. Time Step =   5.943138e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310235e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  1.990000e+04	hyd. Time Step =   5.943132e-02 (SD
+STDOUT : : Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309362e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.000000e+04	hyd. Time Step =   5.943676e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310858e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.010000e+04	hyd. Time Step =   5.943384e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309619e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.020000e+04	hyd. Time Step =   5.943343e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310120e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.030000e+04	hyd. Time Step =   5.943872e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310231e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.040000e+04	hyd. Time Step =   5.943194e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309183e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.050000e+04	hyd. Time Step =   5.943049e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310737e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.060000e+04	hyd. Time Step =   5.943191e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309649e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.070000e+04	hyd. Time Step =   5.943232e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309767e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.080000e+04	hyd. Time Step =   5.942926e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310536e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.090000e+04	hyd. Time Step =   5.943145e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309207e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.100000e+04	hyd. Time Step =   5.943522e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310614e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.110000e+04	hyd. Time Step =   5.943545e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309976e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.120000e+04	hyd. Time Step =   5.943429e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309397e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.130000e+04	hyd. Time Step =   5.943396e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310506e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.140000e+04	hyd. Time Step =   5.943661e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309302e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.150000e+04	hyd. Time Step =   5.943134e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310406e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.160000e+04	hyd. Time Step =   5.943138e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310278e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.170000e+04	hyd. Time Step =   5.943194e-02 
+STDOUT : (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309332e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.180000e+04	hyd. Time Step =   5.943233e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310686e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.190000e+04	hyd. Time Step =   5.942921e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309423e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.200000e+04	hyd. Time Step =   5.943268e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310371e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.210000e+04	hyd. Time Step =   5.943233e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310221e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.220000e+04	hyd. Time Step =   5.943654e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309269e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.230000e+04	hyd. Time Step =   5.943359e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310790e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.240000e+04	hyd. Time Step =   5.943604e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309465e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.250000e+04	hyd. Time Step =   5.943310e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309971e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.260000e+04	hyd. Time Step =   5.943818e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310388e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.270000e+04	hyd. Time Step =   5.943132e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309318e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.280000e+04	hyd. Time Step =   5.943039e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310738e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.290000e+04	hyd. Time Step =   5.943120e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309796e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.300000e+04	hyd. Time Step =   5.943088e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309625e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.310000e+04	hyd. Time Step =   5.943069e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310436e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.320000e+04	hyd. Time Step =   5.943152e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309337e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.330000e+04	hyd. Time Step =   5.943860e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310548e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.340000e+04	hyd. Time Step =   5.943715e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309921e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.350000e+04	hyd. Time Step =   5.942834e-
+STDOUT : 02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309642e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.360000e+04	hyd. Time Step =   5.943643e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310548e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.370000e+04	hyd. Time Step =   5.942961e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309365e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.380000e+04	hyd. Time Step =   5.943375e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310457e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.390000e+04	hyd. Time Step =   5.943447e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310047e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.400000e+04	hyd. Time Step =   5.943092e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309567e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.410000e+04	hyd. Time Step =   5.943436e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310716e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.420000e+04	hyd. Time Step =   5.943561e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309399e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.430000e+04	hyd. Time Step =   5.943371e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310342e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.440000e+04	hyd. Time Step =   5.943121e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310240e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.450000e+04	hyd. Time Step =   5.942981e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309327e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.460000e+04	hyd. Time Step =   5.943297e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310615e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.470000e+04	hyd. Time Step =   5.943628e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309444e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.480000e+04	hyd. Time Step =   5.943371e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310045e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.490000e+04	hyd. Time Step =   5.943505e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310392e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.500000e+04	hyd. Time Step =   5.943391e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309306e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.510000e+04	hyd. Time Step =   5.943610e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310811e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.520000e+04	hyd. Time Step =   5.943327e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309668e+01 [m3/s] (outfl
+STDOUT : ow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.530000e+04	hyd. Time Step =   5.942983e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309842e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.540000e+04	hyd. Time Step =   5.942926e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310429e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.550000e+04	hyd. Time Step =   5.942932e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309212e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.560000e+04	hyd. Time Step =   5.943089e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310631e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.570000e+04	hyd. Time Step =   5.943545e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310020e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.580000e+04	hyd. Time Step =   5.943195e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309655e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.590000e+04	hyd. Time Step =   5.943513e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310458e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.600000e+04	hyd. Time Step =   5.943722e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309293e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.610000e+04	hyd. Time Step =   5.943414e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310520e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.620000e+04	hyd. Time Step =   5.943146e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310238e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.630000e+04	hyd. Time Step =   5.943125e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309533e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.640000e+04	hyd. Time Step =   5.943097e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310668e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.650000e+04	hyd. Time Step =   5.943186e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309425e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.660000e+04	hyd. Time Step =   5.942949e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310344e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.670000e+04	hyd. Time Step =   5.943035e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310211e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.680000e+04	hyd. Time Step =   5.943810e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309230e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.690000e+04	hyd. Time Step =   5.943227e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310656e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.700000e+04	hyd. Time Step =   5.943399e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309573e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : Progress: 
+STDOUT : 54/100
+STDOUT : 
+STDOUT : TIME =  2.710000e+04	hyd. Time Step =   5.943704e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310047e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.720000e+04	hyd. Time Step =   5.943410e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310277e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.730000e+04	hyd. Time Step =   5.943124e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309267e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.740000e+04	hyd. Time Step =   5.943199e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310685e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.750000e+04	hyd. Time Step =   5.943106e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309762e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.760000e+04	hyd. Time Step =   5.943192e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309703e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.770000e+04	hyd. Time Step =   5.942955e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310744e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.780000e+04	hyd. Time Step =   5.943044e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309298e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.790000e+04	hyd. Time Step =   5.943820e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310681e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.800000e+04	hyd. Time Step =   5.943231e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309995e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.810000e+04	hyd. Time Step =   5.943402e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309540e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.820000e+04	hyd. Time Step =   5.943699e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310626e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.830000e+04	hyd. Time Step =   5.943405e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309359e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.840000e+04	hyd. Time Step =   5.943112e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310540e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.850000e+04	hyd. Time Step =   5.943195e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310173e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.860000e+04	hyd. Time Step =   5.943054e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309395e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.870000e+04	hyd. Time Step =   5.943187e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310662e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.880000e+04	hyd. Time Step =   5.942937e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309472e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.890000e+04	hyd
+STDOUT : . Time Step =   5.943363e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310307e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.900000e+04	hyd. Time Step =   5.943574e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310234e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.910000e+04	hyd. Time Step =   5.943126e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309320e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.920000e+04	hyd. Time Step =   5.943507e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310806e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.930000e+04	hyd. Time Step =   5.943705e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309611e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.940000e+04	hyd. Time Step =   5.943401e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309996e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.950000e+04	hyd. Time Step =   5.943099e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310251e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.960000e+04	hyd. Time Step =   5.943191e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309204e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.970000e+04	hyd. Time Step =   5.943045e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310738e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.980000e+04	hyd. Time Step =   5.943126e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309782e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  2.990000e+04	hyd. Time Step =   5.943316e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309785e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.000000e+04	hyd. Time Step =   5.943147e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310560e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.010000e+04	hyd. Time Step =   5.943572e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309067e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.020000e+04	hyd. Time Step =   5.943186e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310597e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.030000e+04	hyd. Time Step =   5.943488e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309971e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.040000e+04	hyd. Time Step =   5.943695e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309605e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.050000e+04	hyd. Time Step =   5.943397e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310569e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.060000e+04	hyd. Time Step =   5.943087e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309283e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.070000e+04	hyd. Time Step =   5.943180e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000
+STDOUT : e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310531e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.080000e+04	hyd. Time Step =   5.943152e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310123e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.090000e+04	hyd. Time Step =   5.943289e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309483e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.100000e+04	hyd. Time Step =   5.942934e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310641e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.110000e+04	hyd. Time Step =   5.943034e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309300e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.120000e+04	hyd. Time Step =   5.943848e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310301e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.130000e+04	hyd. Time Step =   5.943221e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310203e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.140000e+04	hyd. Time Step =   5.943490e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309340e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.150000e+04	hyd. Time Step =   5.943663e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310774e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.160000e+04	hyd. Time Step =   5.943363e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309477e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.170000e+04	hyd. Time Step =   5.943143e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310100e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.180000e+04	hyd. Time Step =   5.943187e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310519e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.190000e+04	hyd. Time Step =   5.943145e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309245e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.200000e+04	hyd. Time Step =   5.943295e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310723e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.210000e+04	hyd. Time Step =   5.943043e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309679e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.220000e+04	hyd. Time Step =   5.943129e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309987e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.230000e+04	hyd. Time Step =   5.943859e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310622e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.240000e+04	hyd. Time Step =   5.943286e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309530e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.250000e+04	hyd. Time Step
+STDOUT :  =   5.943531e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310865e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.260000e+04	hyd. Time Step =   5.943685e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309876e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.270000e+04	hyd. Time Step =   5.943385e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309714e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.280000e+04	hyd. Time Step =   5.943185e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310729e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.290000e+04	hyd. Time Step =   5.943189e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309578e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.300000e+04	hyd. Time Step =   5.943137e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310643e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.310000e+04	hyd. Time Step =   5.943275e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310119e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.320000e+04	hyd. Time Step =   5.943018e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309510e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.330000e+04	hyd. Time Step =   5.943109e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310625e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.340000e+04	hyd. Time Step =   5.943279e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309308e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.350000e+04	hyd. Time Step =   5.943478e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310219e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.360000e+04	hyd. Time Step =   5.943125e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310263e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.370000e+04	hyd. Time Step =   5.943393e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309378e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.380000e+04	hyd. Time Step =   5.943231e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310622e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.390000e+04	hyd. Time Step =   5.943353e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309634e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.400000e+04	hyd. Time Step =   5.942940e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310072e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.410000e+04	hyd. Time Step =   5.943589e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310391e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.420000e+04	hyd. Time Step =   5.943282e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309382e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.430000e+04	hyd. Time Step =   5.943114e
+STDOUT : -02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310820e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.440000e+04	hyd. Time Step =   5.942936e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309769e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.450000e+04	hyd. Time Step =   5.943109e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309768e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.460000e+04	hyd. Time Step =   5.942913e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310440e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.470000e+04	hyd. Time Step =   5.943089e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309322e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.480000e+04	hyd. Time Step =   5.943253e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310602e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.490000e+04	hyd. Time Step =   5.942967e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309957e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.500000e+04	hyd. Time Step =   5.943030e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309692e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.510000e+04	hyd. Time Step =   5.943063e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310673e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.520000e+04	hyd. Time Step =   5.943030e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309220e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.530000e+04	hyd. Time Step =   5.942896e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310598e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.540000e+04	hyd. Time Step =   5.943558e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309946e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.550000e+04	hyd. Time Step =   5.943158e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309604e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.560000e+04	hyd. Time Step =   5.943246e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310675e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.570000e+04	hyd. Time Step =   5.943089e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309441e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.580000e+04	hyd. Time Step =   5.943336e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310252e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.590000e+04	hyd. Time Step =   5.943235e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310085e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.600000e+04	hyd. Time Step =   5.943364e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309465e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.610000e+04	hyd. Time Step =   5.943096e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3
+STDOUT : /s] (inflow)
+STDOUT :  Qout[2]     = 1.310705e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.620000e+04	hyd. Time Step =   5.943268e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309634e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.630000e+04	hyd. Time Step =   5.943254e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309982e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.640000e+04	hyd. Time Step =   5.943059e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310353e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.650000e+04	hyd. Time Step =   5.943253e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309359e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.660000e+04	hyd. Time Step =   5.943226e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310790e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.670000e+04	hyd. Time Step =   5.942891e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309770e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.680000e+04	hyd. Time Step =   5.943219e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309699e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.690000e+04	hyd. Time Step =   5.943174e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310531e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.700000e+04	hyd. Time Step =   5.943694e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309217e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.710000e+04	hyd. Time Step =   5.943413e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310573e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.720000e+04	hyd. Time Step =   5.943371e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310033e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.730000e+04	hyd. Time Step =   5.943404e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309685e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.740000e+04	hyd. Time Step =   5.943243e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310641e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.750000e+04	hyd. Time Step =   5.943291e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309347e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.760000e+04	hyd. Time Step =   5.943070e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310433e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.770000e+04	hyd. Time Step =   5.942953e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310280e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.780000e+04	hyd. Time Step =   5.943141e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309424e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.790000e+04	hyd. Time Step =   5.943394e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310728e+01 [m3/s] 
+STDOUT : (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.800000e+04	hyd. Time Step =   5.943159e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309211e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.810000e+04	hyd. Time Step =   5.943348e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310226e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.820000e+04	hyd. Time Step =   5.943295e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310159e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.830000e+04	hyd. Time Step =   5.944082e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309311e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.840000e+04	hyd. Time Step =   5.943445e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310774e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.850000e+04	hyd. Time Step =   5.943319e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309672e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.860000e+04	hyd. Time Step =   5.943086e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310111e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.870000e+04	hyd. Time Step =   5.943145e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310197e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.880000e+04	hyd. Time Step =   5.943376e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309292e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.890000e+04	hyd. Time Step =   5.942944e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310820e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.900000e+04	hyd. Time Step =   5.943105e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309845e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.910000e+04	hyd. Time Step =   5.943025e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309740e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.920000e+04	hyd. Time Step =   5.943203e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310603e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.930000e+04	hyd. Time Step =   5.943035e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309247e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.940000e+04	hyd. Time Step =   5.942919e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310647e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.950000e+04	hyd. Time Step =   5.943531e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309963e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.960000e+04	hyd. Time Step =   5.943122e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309641e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.970000e+04	hyd. Time Step =   5.943588e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310693e+01 [m3/s] (outflow)
+STDOUT : Prog
+STDOUT : ress: 79/100
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.980000e+04	hyd. Time Step =   5.943820e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309253e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  3.990000e+04	hyd. Time Step =   5.943380e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310511e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.000000e+04	hyd. Time Step =   5.943713e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310059e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.010000e+04	hyd. Time Step =   5.943530e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309507e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.020000e+04	hyd. Time Step =   5.943070e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310735e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.030000e+04	hyd. Time Step =   5.943098e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309184e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.040000e+04	hyd. Time Step =   5.943071e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310233e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.050000e+04	hyd. Time Step =   5.942855e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310394e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.060000e+04	hyd. Time Step =   5.943445e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309588e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.070000e+04	hyd. Time Step =   5.943565e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310442e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.080000e+04	hyd. Time Step =   5.943234e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309671e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.090000e+04	hyd. Time Step =   5.943783e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309916e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.100000e+04	hyd. Time Step =   5.943452e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310079e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.110000e+04	hyd. Time Step =   5.943340e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309495e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.120000e+04	hyd. Time Step =   5.943297e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310568e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.130000e+04	hyd. Time Step =   5.943076e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309284e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.140000e+04	hyd. Time Step =   5.943139e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309980e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.150000e+04	hyd. Time Step =   5.943114e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310477e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : P
+STDOUT : rogress: 83/100
+STDOUT : TIME =  4.160000e+04	hyd. Time Step =   5.942951e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309317e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.170000e+04	hyd. Time Step =   5.943239e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310657e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.180000e+04	hyd. Time Step =   5.943432e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309752e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.190000e+04	hyd. Time Step =   5.943331e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309300e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.200000e+04	hyd. Time Step =   5.943939e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310597e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.210000e+04	hyd. Time Step =   5.943441e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309213e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.220000e+04	hyd. Time Step =   5.943312e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310524e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.230000e+04	hyd. Time Step =   5.943263e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310049e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.240000e+04	hyd. Time Step =   5.943053e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309399e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.250000e+04	hyd. Time Step =   5.943128e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310706e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.260000e+04	hyd. Time Step =   5.943118e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309545e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.270000e+04	hyd. Time Step =   5.942955e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310355e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.280000e+04	hyd. Time Step =   5.943237e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310254e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.290000e+04	hyd. Time Step =   5.943575e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309313e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.300000e+04	hyd. Time Step =   5.943199e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310605e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.310000e+04	hyd. Time Step =   5.943427e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309593e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.320000e+04	hyd. Time Step =   5.943350e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310070e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.330000e+04	hyd. Time Step =   5.943683e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310286e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.340000e+04	hyd. Time S
+STDOUT : tep =   5.943504e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309321e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.350000e+04	hyd. Time Step =   5.943041e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310658e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.360000e+04	hyd. Time Step =   5.943069e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309735e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.370000e+04	hyd. Time Step =   5.943116e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309863e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.380000e+04	hyd. Time Step =   5.942957e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310504e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.390000e+04	hyd. Time Step =   5.943245e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309330e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.400000e+04	hyd. Time Step =   5.943576e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310659e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.410000e+04	hyd. Time Step =   5.943337e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309984e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.420000e+04	hyd. Time Step =   5.943401e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309570e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.430000e+04	hyd. Time Step =   5.943346e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310593e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.440000e+04	hyd. Time Step =   5.943675e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309288e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.450000e+04	hyd. Time Step =   5.943495e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310535e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.460000e+04	hyd. Time Step =   5.943032e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309987e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.470000e+04	hyd. Time Step =   5.943060e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309504e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.480000e+04	hyd. Time Step =   5.943122e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310750e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.490000e+04	hyd. Time Step =   5.942961e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309331e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.500000e+04	hyd. Time Step =   5.943253e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310186e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.510000e+04	hyd. Time Step =   5.943583e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310224e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.520000e+04	hyd. Time Step =   5.943345e-02 (SD: Dranse)
+STDOUT :  Qin[1]      =
+STDOUT :  1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309290e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.530000e+04	hyd. Time Step =   5.943399e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310776e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.540000e+04	hyd. Time Step =   5.943343e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309299e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.550000e+04	hyd. Time Step =   5.943667e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310082e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.560000e+04	hyd. Time Step =   5.943487e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310401e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.570000e+04	hyd. Time Step =   5.943024e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309520e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.580000e+04	hyd. Time Step =   5.943051e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310643e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.590000e+04	hyd. Time Step =   5.943128e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309593e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.600000e+04	hyd. Time Step =   5.942964e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309480e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.610000e+04	hyd. Time Step =   5.943261e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310094e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.620000e+04	hyd. Time Step =   5.943594e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309302e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.630000e+04	hyd. Time Step =   5.943353e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310848e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.640000e+04	hyd. Time Step =   5.943398e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309868e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.650000e+04	hyd. Time Step =   5.943351e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309141e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.660000e+04	hyd. Time Step =   5.943598e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310748e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.670000e+04	hyd. Time Step =   5.943289e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309152e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.680000e+04	hyd. Time Step =   5.942983e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310538e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.690000e+04	hyd. Time Step =   5.942920e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310071e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.700000e+04	hyd. Time Step =   5.942948e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309534e+01 [m3/s] (outflow)
+STDOUT : Progres
+STDOUT : s: 94/100
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.710000e+04	hyd. Time Step =   5.943070e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310770e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.720000e+04	hyd. Time Step =   5.943485e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309428e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.730000e+04	hyd. Time Step =   5.943170e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310238e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.740000e+04	hyd. Time Step =   5.943502e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310247e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.750000e+04	hyd. Time Step =   5.943734e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309314e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.760000e+04	hyd. Time Step =   5.943425e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310708e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.770000e+04	hyd. Time Step =   5.943309e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309618e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.780000e+04	hyd. Time Step =   5.943239e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310044e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.790000e+04	hyd. Time Step =   5.943202e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310348e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.800000e+04	hyd. Time Step =   5.943233e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309345e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.810000e+04	hyd. Time Step =   5.942957e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310718e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.820000e+04	hyd. Time Step =   5.943041e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309795e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.830000e+04	hyd. Time Step =   5.943254e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309813e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.840000e+04	hyd. Time Step =   5.943580e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310537e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.850000e+04	hyd. Time Step =   5.942882e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309315e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.860000e+04	hyd. Time Step =   5.943409e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310415e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.870000e+04	hyd. Time Step =   5.943540e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309511e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.880000e+04	hyd. Time Step =   5.943545e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309658e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME
+STDOUT :  =  4.890000e+04	hyd. Time Step =   5.942942e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310372e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.900000e+04	hyd. Time Step =   5.943258e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309245e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.910000e+04	hyd. Time Step =   5.943064e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310555e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.920000e+04	hyd. Time Step =   5.943228e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310167e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.930000e+04	hyd. Time Step =   5.943260e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309280e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.940000e+04	hyd. Time Step =   5.943263e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310258e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.950000e+04	hyd. Time Step =   5.942829e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309599e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.960000e+04	hyd. Time Step =   5.943091e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310323e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.970000e+04	hyd. Time Step =   5.943240e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310205e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.980000e+04	hyd. Time Step =   5.942910e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309287e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  4.990000e+04	hyd. Time Step =   5.943348e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.310700e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : 
+STDOUT : TIME =  5.000000e+04	hyd. Time Step =   5.942682e-02 (SD: Dranse)
+STDOUT :  Qin[1]      = 1.310000e+01 [m3/s] (inflow)
+STDOUT :  Qout[2]     = 1.309452e+01 [m3/s] (outflow)
+STDOUT : 
+STDOUT : -> Domain: Run Time of the simulation= 423.708 sec
+STDOUT : -> Domain: Finished simulation.
+STDOUT : 
+STDOUT : 
+STDOUT : ------------------------------------------------------------
+STDOUT :  BASEMENT successfully processed all necessary jobs!
+STDOUT : 

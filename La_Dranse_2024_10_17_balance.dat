@@ -1,5 +1,0 @@
-# time[s]   	hydraulic_timestep[s] 	Element    	Edge       	water_vol[m3] 	initial_volume_sediment[m3] 	initial_volume_suspension[m3] 	bedload_boundary_inflow[m3] 	bedload_boundary_outflow[m3] 	bedload_external_source[m3] 	suspension_boundary_inflow[m3] 	suspension_boundary_outflow[m3] 	suspension_external_source[m3] 	present_sediment_volume[m3] 	present_suspension_volume[m3] 	mass_error_absolute[m3] 	mass_error_relative[%]
-0 	0.0569727908 	        -1 	        -1 	12869.7658 	72648.0806 	0 	0 	0 	0 	0 	0 	0 	72648.0806 	0 	0 	0
-1800 	0.069233567 	       119 	         6 	12730.8787 	72648.0806 	0 	-185.109325 	0.0136437901 	0 	0 	0 	0 	72833.1763 	0 	3.55066732e-09 	4.87506861e-12
-
-# Run Time of the simulation= 146.483 sec

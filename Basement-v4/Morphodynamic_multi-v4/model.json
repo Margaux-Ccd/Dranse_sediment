@@ -1,289 +1,341 @@
 {
-    "SETUP": {
-        "simulation_name": "D_morphology_mixed",
-        "BASEHPC": {
-            "PHYSICAL_PROPERTIES": {
-                "gravity": 9.81
+  "SETUP": {
+    "BASEMD": {
+      "BASEPLANE_2D": [
+        {
+          "GEOMETRY": {
+            "STRINGDEF": [
+              {
+                "name": "inflow",
+                "upstream_direction": "right",
+                "node_ids": [
+                  1880,
+                  328,
+                  487,
+                  433,
+                  490,
+                  484,
+                  241,
+                  1005,
+                  595,
+                  930,
+                  936
+                ]
+              },
+              {
+                "name": "outflow",
+                "upstream_direction": "right",
+                "node_ids": [
+                  1741,
+                  1389,
+                  1140,
+                  1313,
+                  882,
+                  918
+                ]
+              }
+            ],
+            "file": "/La Dranse_computational-mesh_13-11-2025.2dm",
+            "type": "2dm"
+          },
+          "HYDRAULICS": {
+            "BOUNDARY": [
+              {
+                "dynamic_slope": "no",
+                "file": "/Discharge_scanperiod_5min.txt",
+                "max_interval": 20.0,
+                "number_of_iterations": 5000,
+                "precision": -1.0,
+                "slope": 20.6,
+                "string_name": "inflow",
+                "type": "hydrograph",
+                "weighting_type": "area",
+                "wse_calc_method": "average"
+              },
+              {
+                "type": "hqrelation",
+                "string_name": "outflow",
+                "slope": 20.6
+              }
+            ],
+            "FRICTION": {
+              "default_friction": 0.03,
+              "friction": [
+                0.03,
+                0.05
+              ],
+              "grain_size_friction": "no",
+              "index": [
+                1,
+                2
+              ],
+              "input_type": "index_table",
+              "type": "manning",
+              "wall_friction": "on"
             },
-            "BASEPLANE_2D": {
-                "GEOMETRY": {
-                    "INTERPOLATION": {
-                        "method": "weighted"
-                    },
-                    "REGIONDEF": [
-                        {"index": [1],
-                            "name": "one"},
-                        {"index": [2],
-                            "name": "two"},
-                        {"index": [3],
-                            "name": "three"},
-                        {"index": [4],
-                            "name": "four"},
-                        {"index": [5],
-                            "name": "five"},
-                        {"index": [6],
-                            "name": "six"},
-                        {"index": [7],
-                            "name": "seven"},
-                        {"index": [8],
-                            "name": "eight"},
-                        {"index": [9],
-                            "name": "nine"},
-                        {"index": [10],
-                            "name": "ten"},
-                        {"index": [11],
-                            "name": "eleven"},
-                        {"index": [12],
-                            "name": "twelve"}
-                    ],
-                    "STRINGDEF": [
-                        {"name": "Inflow",
-                            "upstream_direction": "left"},
-                        {"name": "Outflow",
-                            "upstream_direction": "left"}
-                    ],
-                    "mesh_file": "Flaz_mesh.2dm"
-                },
-                "HYDRAULICS": {
-                    "BOUNDARY": {
-                        "STANDARD": [
-                            {
-                                "discharge_file": "Inflow_transient.txt",
-                                "name": "Inflow",
-                                "slope": 0.02,
-                                "string_name": "Inflow",
-                                "type": "uniform_in"
-                            },
-                            {
-                                "name": "Outflow",
-                                "slope": 0.02,
-                                "string_name": "Outflow",
-                                "type": "uniform_out"
-                            }
-                        ]
-                    },
-                    "FRICTION": {
-                        "default_friction": 30,
-                        "regions": [
-                            {"friction": 28.0,
-                                "region_name": "one"},
-                            {"friction": 30.0,
-                                "region_name": "two"},
-                            {"friction": 35.0,
-                                "region_name": "three"},
-                            {"friction": 30.0,
-                                "region_name": "four"},
-                            {"friction": 30.0,
-                                "region_name": "five"},
-                            {"friction": 30.0,
-                                "region_name": "six"},
-                            {"friction": 32.0,
-                                "region_name": "seven"},
-                            {"friction": 32.0,
-                                "region_name": "eight"},
-                            {"friction": 35.0,
-                                "region_name": "nine"},
-                            {"friction": 28.0,
-                                "region_name": "ten"},
-                            {"friction": 28.0,
-                                "region_name": "eleven"},
-                            {"friction": 28.0,
-                                "region_name": "twelve"}
-                        ],
-                        "type": "strickler"
-                    },
-                    "INITIAL": {
-                        "file": "../A_Stationary/results.h5",
-                        "time": 3000.0,
-                        "type": "continue"
-                    },
-                    "PARAMETER": {
-                        "CFL": 0.95,
-                        "fluid_density": 1000.0,
-                        "max_time_step": 100,
-                        "minimum_water_depth": 0.002
-                    }
-                },
-                "MORPHOLOGY": {
-                    "INITIAL":{
-                        "type": "mesh"
-                    },
-                    "PARAMETER": {
-                        "morphodynamic_start": 0.0,
-                        "sediment_porosity": 0.4,
-                        "sediment_density" : 2650.0,
-                        "morphodynamic_solver": "Upwind",
-                        "upwind_factor": 0.8,
-                        "ACTIVE_LAYER": {
-                        "active_layer_type": "constant",
-                        "active_layer_thickness": 0.1
-                        }
-                    },
-                    "BEDMATERIAL": {
-                        "PARAMETER": {
-                            "correction_accuracy": 0.001,
-                            "max_iteration": 10
-                        },
-                        "GRAIN_CLASS": {
-                            "diameters": [0.001, 0.005, 0.015, 0.044, 0.082, 0.150]
-                        },
-                        "MIXTURE": [
-                            {
-                                "name": "mixture_inflow",
-                                "volume_fraction": [15, 15, 23, 27, 10, 10]
-                            },
-                            {
-                                "name": "mixture_element_roughness",
-                                "volume_fraction": [17, 11, 14, 27, 14, 17]
-                            },
-                            {
-                                "name": "mixture_widening",
-                                "volume_fraction": [21, 13, 16, 25, 11, 14]
-                            },
-                            {
-                                "name": "mixture_alt_bars",
-                                "volume_fraction": [27, 14, 14, 20, 14, 11]
-                            }
-                        ],
-                        "SOILDEF": [
-                            {
-                                "name": "soil_element_roughness",
-                                "LAYER": [
-                                    {"z_rel": -0.8,
-                                    "mixture_name": "mixture_element_roughness"}
-                                ]
-                            },
-                            {
-                                "name": "soil_widening",
-                                "LAYER": [
-                                    {"z_rel": -2.0,
-                                    "mixture_name": "mixture_widening"}
-                                ]
-                            },
-                            {
-                                "name": "soil_alt_bars",
-                                "LAYER": [
-                                    {
-                                        "z_rel": -2.0,
-                                        "mixture_name": "mixture_alt_bars"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "soil_fix",
-                                "LAYER": [
-                                    {
-                                        "z_rel": -0.0,
-                                        "mixture_name": "mixture_element_roughness"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "soil_fix_20",
-                                "LAYER": [
-                                    {
-                                        "z_rel": -0.2,
-                                        "mixture_name": "mixture_element_roughness"
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "soil_fix_40",
-                                "LAYER": [
-                                    {
-                                        "z_rel": -0.4,
-                                        "mixture_name": "mixture_element_roughness"
-                                    }
-                                ]
-                            }
-                        ],
-                        "SOIL_ASSIGNMENT": {
-                            "default_soil": "soil_fix",
-                            "regions": [
-                                {
-                                "region_name": "one",
-                                "soil_name": "soil_element_roughness"
-                                },
-                                {
-                                "region_name": "two",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "three",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "four",
-                                "soil_name": "soil_widening"
-                                },
-                                {
-                                "region_name": "five",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "six",
-                                "soil_name": "soil_widening"
-                                },
-                                {
-                                "region_name": "seven",
-                                "soil_name": "soil_alt_bars"
-                                },
-                                {
-                                "region_name": "eight",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "nine",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "ten",
-                                "soil_name": "soil_fix"
-                                },
-                                {
-                                "region_name": "eleven",
-                                "soil_name": "soil_fix_20"
-                                },
-                                {
-                                "region_name": "twelve",
-                                "soil_name": "soil_fix_40"
-                                }
-                            ]
-                        }
-                    },
-                    "BEDLOAD": {
-                        "FORMULA": {
-                            "type": "MPM_multi",
-                            "factor":1.0,
-                            "coefficient":3.2,
-                            "exponent":1.6,
-                            "theta_critical_approach": "constant",
-                            "critical_value":0.047
-                        },
-                        "DIRECTION": {
-                            "LATERAL_SLOPE": {
-                                "factor": 1.5
-                            }
-                        },
-                        "BOUNDARY":{
-                            "STANDARD": [
-                                {
-                                    "name": "inflow_MOR",
-                                    "string_name": "Inflow",
-                                    "type": "transport_capacity",
-                                    "boundary_factor": 0.8
-                                },
-                                {
-                                    "name": "outflow_MOR",
-                                    "string_name": "Outflow",
-                                    "type": "equilibrium_out",
-                                    "reference_bed_elevation": 1700.68
-                                }
-                            ]
-                        }
-                    }
-                }
+            "INITIAL": {
+              "type": "continue",
+              "file": "/Dranse_restart_hydro.h5",
+              "restart_solution_time": -1
+            },
+            "PARAMETER": {
+              "dynamic_depth_solver": "on",
+              "dynamic_depth_solver_precision": 0.005,
+              "geo_max_angle_quadrilateral": 45.0,
+              "geo_min_area_ratio": 0.05,
+              "geo_min_aspect_ratio": 0.06,
+              "minimum_water_depth": 0.05,
+              "riemann_solver": "exact",
+              "riemann_tolerance": 1e-06,
+              "simulation_scheme": "exp",
+              "velocity_update_partial": "volume_area"
             }
+          },
+          "MORPHOLOGY": {
+            "BEDLOAD": {
+              "BOUNDARY": [
+                {
+                  "factor": 1.0,
+                  "mixture": "multi_grain",
+                  "string_name": "inflow",
+                  "type": "transport_capacity"
+                },
+                {
+                  "fraction_boundary": 1.0,
+                  "string_name": "outflow",
+                  "type": "IODown"
+                }
+              ],
+              "DIRECTION": [
+                {
+                  "lateral_index": [
+                    1,
+                    2
+                  ],
+                  "lateral_transport_exponent": 1.2,
+                  "lateral_transport_factor": 0.5,
+                  "lateral_transport_type": "lateral_bed_slope",
+                  "scale_lateral_transport": "yes"
+                }
+              ],
+              "FORMULA": {
+                "bedforms_type": "no_bedforms",
+                "bedload_exponent": 1.6,
+                "bedload_factor": 0.61625,
+                "bedload_formula": "mpm",
+                "critical_shear_stress_calibration": 1.0,
+                "local_slope_correction": "local_slope_vanrijn",
+                "theta_critical": [
+                  0.055,
+                  0.055
+                ],
+                "theta_critical_approach": "theta_critical_vanrijn",
+                "theta_critical_index": [
+                  1,
+                  2
+                ]
+              },
+              "PARAMETER": {
+                "bedload_routing_start": 0.0,
+                "limit_bedload_wetted": "off",
+                "use_cell_averaged_bedload_flux": "off",
+                "use_real_edge_lengths": "off"
+              }
+            },
+            "BEDMATERIAL": {
+              "GRAIN_CLASS": {
+                "diameters": [
+                  7.0,
+                  20.0,
+                  33.0,
+                  46.0,
+                  59.0
+                ]
+              },
+              "MIXTURE": [
+                {
+                  "name": "multi_grain",
+                  "volume_fraction": [
+                    36.4,
+                    20.6,
+                    11.8,
+                    16.0,
+                    15.2
+                  ]
+                }
+              ],
+              "SOIL_ASSIGNMENT": {
+                "index": [
+                  1,
+                  2
+                ],
+                "soil": [
+                  "riverbed",
+                  "grass"
+                ],
+                "type": "index_table"
+              },
+              "SOIL_DEF": [
+                {
+                  "LAYER": [
+                    {
+                      "bottom_elevation": -5.0,
+                      "mixture": "multi_grain"
+                    }
+                  ],
+                  "name": "riverbed",
+                  "tau_erosion_start": -1.0
+                },
+                {
+                  "LAYER": [],
+                  "name": "grass",
+                  "tau_erosion_start": -1.0
+                }
+              ]
+            },
+            "GRAVITATIONAL_TRANSPORT": {
+              "angle_failure_deposited": [
+                10.0
+              ],
+              "angle_failure_dry": [
+                30.0
+              ],
+              "angle_failure_wetted": [
+                15.0
+              ],
+              "angle_wetted_criterion": "partially_wetted",
+              "check_hydrostatic_stabilization": "no",
+              "cycle_step": 5,
+              "gravity_transport_on_cells": "partially wetted",
+              "index": [
+                6
+              ],
+              "max_delta_z": 0.001,
+              "max_iterations": 10,
+              "min_changed_volume": 0.01,
+              "only_subsurface_angle": "no",
+              "stabilization_height": 0.0
+            },
+            "INITIAL": {
+              "type": "initial_mesh"
+            },
+            "PARAMETER": {
+              "control_volume_initial": "soildef",
+              "control_volume_type": "constant",
+              "create_new_layers": "off",
+              "density": 2650.0,
+              "distortion_offset": 0.0,
+              "distortion_time_interval": -1.0,
+              "local_slope_angle_repose": 30.0,
+              "min_theta_critic": 0.02,
+              "porosity": 37.0,
+              "strong_coupling": "off"
+            }
+          },
+          "OUTPUT": {
+            "SPECIAL_OUTPUT": [
+              {
+                "format": "sms",
+                "output_time_step": 1000.0,
+                "threshold_wse": -1000000.0,
+                "type": "node_centered",
+                "values": [
+                  {
+                    "accumulator": "none",
+                    "value": "depth"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "wse"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "velocity"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "deltaz"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "z_node"
+                  }
+                ]
+              },
+              {
+                "balance_values": [
+                  {
+                    "accumulator": "none",
+                    "value": "sediment"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "timestep"
+                  }
+                ],
+                "output_time_step": 1000.0,
+                "threshold_wse": -1000000.0,
+                "type": "balance"
+              },
+              {
+                "boundary_values": [
+                  {
+                    "accumulator": "none",
+                    "value": "Q"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "Qsed"
+                  }
+                ],
+                "flush_all_num_steps": 0,
+                "history_one_file": "yes",
+                "output_time_step": 1000.0,
+                "threshold_wse": -1000000.0,
+                "type": "boundary_history"
+              },
+              {
+                "output_time_step": 1000.0,
+                "type": "node_history",
+                "node_ids": [
+                  1741,
+                  1389,
+                  1140,
+                  1313,
+                  882,
+                  918
+                ],
+                "node_values": [
+                  {
+                    "accumulator": "none",
+                    "value": "grain_size"
+                  }
+                ]
+              }
+            ],
+            "console_time_step": 100.0,
+            "restart_time_step": 1e+32
+          },
+          "TIMESTEP": {
+            "CFL": 1.0,
+            "ignore_wave_celerity": "off",
+            "initial_time_step": 1.0,
+            "maximum_time_step": 1000.0,
+            "minimum_time_step": 0.001,
+            "morph_cycle": "off",
+            "start_time": 0.0,
+            "total_run_time": 10000.0
+          },
+          "region_name": "Dranse"
         }
-    }
+      ],
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81,
+        "rho_fluid": 1000.0,
+        "viscosity": 1e-06
+      },
+      "multiregion": "Dranse"
+    },
+    "simulation_name": "Dranse_single_1"
+  }
 }
