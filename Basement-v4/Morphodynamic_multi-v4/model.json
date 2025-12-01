@@ -50,7 +50,7 @@
                 "upstream_direction": "right"
               }
             ],
-            "file": "/La Dranse_computational-mesh_13-11-2025.2dm",
+            "file": "/La Dranse 2024_computational-mesh_28-11-2025.2dm",
             "type": "2dm"
           },
           "HYDRAULICS": {
@@ -134,7 +134,7 @@
                 }
               ],
               "FORMULA": {
-                "bedforms_type": "no_bedforms",
+                "bedforms_type": "mpm_bedforms",
                 "bedload_exponent": 1.6,
                 "bedload_factor": 0.61625,
                 "bedload_formula": "mpm_multi",
@@ -152,8 +152,8 @@
               },
               "PARAMETER": {
                 "bedload_routing_start": 0.0,
-                "limit_bedload_wetted": "off",
-                "use_cell_averaged_bedload_flux": "off",
+                "limit_bedload_wetted": "on",
+                "use_cell_averaged_bedload_flux": "on",
                 "use_real_edge_lengths": "off"
               }
             },
@@ -218,16 +218,16 @@
               "angle_failure_wetted": [
                 15.0
               ],
-              "angle_wetted_criterion": "partially_wetted",
+              "angle_wetted_criterion": "fully_wetted",
               "check_hydrostatic_stabilization": "no",
               "cycle_step": 5,
               "gravity_transport_on_cells": "partially wetted",
               "index": [
-                6
+                1
               ],
-              "max_delta_z": 0.001,
+              "max_delta_z": 0.1,
               "max_iterations": 10,
-              "min_changed_volume": 0.01,
+              "min_changed_volume": 0.001,
               "only_subsurface_angle": "no",
               "stabilization_height": 0.0
             },
@@ -274,6 +274,10 @@
                   {
                     "accumulator": "none",
                     "value": "z_node"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "tau"
                   }
                 ]
               },
@@ -303,29 +307,11 @@
                     "value": "Qsed"
                   }
                 ],
-                "flush_all_num_steps": 0,
+                "flush_all_num_steps": 1000,
                 "history_one_file": "yes",
-                "output_time_step": 5000.0,
+                "output_time_step": 1000.0,
                 "threshold_wse": -1000000.0,
                 "type": "boundary_history"
-              },
-              {
-                "output_time_step": 1000.0,
-                "type": "node_history",
-                "node_ids": [
-                  1741,
-                  1389,
-                  1140,
-                  1313,
-                  882,
-                  918
-                ],
-                "node_values": [
-                  {
-                    "accumulator": "none",
-                    "value": "grain_size"
-                  }
-                ]
               }
             ],
             "console_time_step": 1000.0,
@@ -338,7 +324,7 @@
             "maximum_time_step": 1000.0,
             "minimum_time_step": 0.001,
             "morph_cycle": "off",
-            "start_time": 110000.0,
+            "start_time": 0.0,
             "total_run_time": 604800.0
           },
           "region_name": "Dranse"
